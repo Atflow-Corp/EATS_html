@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Logo.png" type="image/png">
+    <link rel="stylesheet" href="main.css">
+    <title>회원가입</title>
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="logo-area">
+                <img src="img/Logo.png" alt="Logo" class="logo">
+                <img src="img/letters.svg" alt="Letters" class="letters">
+            </div>
+            <div class="login-area">
+                <span class="login-text" id="loginText">로그인</span>
+                <span class="user-name" id="userName" style="display: none;">사용자 이름</span> <!-- 로그인 후 사용자 이름 표시 -->
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <div class="box">
+            <h1 class="title">회원가입을 시작합니다!</h1>
+            <p class="subtitle">EATS에 가입하고 가장 빠르고 정확하게 자폐 스펙트럼을 진단해보세요.</p>
+            <input type="email" id="emailInput" placeholder="이메일을 입력해주세요" class="email-input">
+            <p id="errorMessage" class="error-message" style="display: none;">중복된 이메일이 있습니다. cs@eats.kr로 문의해주세요.</p>
+            <button class="signup-button" onclick="validateEmail()">EATS 회원가입</button>
+            <p class="already-member">이미 회원가입을 하셨나요? <a href="#" class="login-link">로그인</a></p>
+        </div>
+    </main>
+    <script>
+        // 로그인 상태를 나타내는 변수 (예시로 true로 설정)
+        let isLoggedIn = false; // 로그인 상태를 false로 초기화
+
+        // 로그인 상태에 따라 텍스트 변경
+        function updateLoginStatus() {
+            const loginText = document.getElementById('loginText');
+            const userName = document.getElementById('userName');
+
+            if (isLoggedIn) {
+                loginText.style.display = 'none'; // 로그인 텍스트 숨기기
+                userName.style.display = 'inline'; // 사용자 이름 보이기
+            } else {
+                loginText.style.display = 'inline'; // 로그인 텍스트 보이기
+                userName.style.display = 'none'; // 사용자 이름 숨기기
+            }
+        }
+
+        // 페이지 로드 시 상태 업데이트
+        window.onload = updateLoginStatus;
+
+        // 예시: 로그인 상태 변경 (실제 로그인 로직에 따라 변경)
+        // isLoggedIn = true; // 로그인 상태로 변경
+        // updateLoginStatus(); // 상태 업데이트 호출
+
+        function validateEmail() {
+            const emailInput = document.getElementById('emailInput');
+            const errorMessage = document.getElementById('errorMessage');
+
+            // 이메일 유효성 검사 (예시로 간단한 정규 표현식 사용)
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(emailInput.value)) {
+                emailInput.style.borderColor = '#FDA29B'; // 잘못된 이메일 입력 시 테두리 색상 변경
+                errorMessage.style.display = 'inline'; // 에러 메시지 표시
+            } else {
+                emailInput.style.borderColor = ''; // 테두리 색상 초기화
+                errorMessage.style.display = 'none'; // 에러 메시지 숨기기
+            }
+        }
+    </script>
+</body>
+</html>
