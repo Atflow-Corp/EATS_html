@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Logo.png" type="image/png">
+    <link rel="stylesheet" href="main.css">
+    <title>이용약관 동의</title>
+</head>
+<body>
+
+        <nav class="top-nav">
+            <div class="nav-container">
+                <div class="logo-area">
+                    <img src="img/logo.png" alt="Logo" class="logo">
+                    <img src="img/letters.svg" alt="Letters" class="letters">
+                </div>
+                <div class="login-area">
+                    <span class="login-text" id="loginText">로그인</span>
+                    <span class="user-name" id="userName" style="display: none;">사용자 이름</span>
+                </div>
+            </div>
+        </nav>
+        <main class="main-content">
+            <div class="box2">
+                <h1 class="title" style="margin-bottom: 32px;">이용약관 동의</h1>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="agreeAll" onchange="toggleAllCheckboxes(this)">
+                    서비스 이용 약관에 모두 동의합니다.
+                </label>
+                <hr class="divider">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="ageCheck">(필수)
+                    <a href="#" style="color: #444CE7;"> 만 14세 이상 확인</a>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="termsOfService">(필수)
+                    <a href="#" style="color: #444CE7;"> 서비스 이용 약관 동의</a>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="privacyPolicy">(필수)
+                    <a href="#" style="color: #444CE7;"> 개인정보 수집 이용 동의</a>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="thirdParty">(필수)
+                    <a href="#" style="color: #444CE7;"> 개인정보 제3자 제공 및 위탁 동의</a>
+                </label>
+                <label class="checkbox-label" style="margin-bottom: 32px;">
+                    <input type="checkbox" id="marketing">(선택)
+                    <a href="#" style="color: #444CE7;"> 마케팅 목적 개인정보 수집 및 이용 동의</a>
+                </label>
+                <div class="button-container">
+                    <button class="previous-button" onclick="goToPrevious()">이전</button>
+                    <button class="agree-button" id="agreeButton" onclick="goToNext()">동의</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function goToPrevious() {
+            window.location.href = 'JOIN02.html'; // 이전 페이지로 이동
+        }
+
+        function goToNext() {
+            // 다음 페이지로 이동하는 로직 추가
+            alert('다음 페이지로 이동합니다.'); // 예시로 알림창 표시
+        }
+
+       
+
+    </script>
+</body>
+</html> 
