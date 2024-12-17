@@ -30,7 +30,9 @@
                 </label>
                 <hr class="divider">
                 <label class="checkbox-label">
-                    <input type="checkbox" id="ageCheck">(필수)
+                    <input type="checkbox" id="ageCheck" class="custom-checkbox">
+                    <span class="custom-checkbox-indicator"></span>
+                    (필수)
                     <a href="#" style="color: #444CE7;"> 만 14세 이상 확인</a>
                 </label>
                 <label class="checkbox-label">
@@ -49,9 +51,9 @@
                     <input type="checkbox" id="marketing">(선택)
                     <a href="#" style="color: #444CE7;"> 마케팅 목적 개인정보 수집 및 이용 동의</a>
                 </label>
-                <div class="button-container">
+                <div class="button-container" style="margin-top: 32px;">
                     <button class="previous-button" onclick="goToPrevious()">이전</button>
-                    <button class="agree-button" id="agreeButton" onclick="goToNext()">동의</button>
+                    <button class="agree-button" id="agreeButton" onclick="goToNext()" disabled>동의</button>
                 </div>
             </div>
         </main>
@@ -67,7 +69,26 @@
             alert('다음 페이지로 이동합니다.'); // 예시로 알림창 표시
         }
 
-       
+        function toggleAllCheckboxes(checkbox) {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const agreeButton = document.getElementById('agreeButton');
+            
+            checkboxes.forEach((cb) => {
+                cb.checked = checkbox.checked;
+            });
+
+            // 모든 체크박스가 체크되었는지 확인
+            const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+            
+            // 동의 버튼 활성화/비활성화
+            if (allChecked) {
+                agreeButton.classList.add('active');
+                agreeButton.removeAttribute('disabled');
+            } else {
+                agreeButton.classList.remove('active');
+                agreeButton.setAttribute('disabled', true);
+            }
+        }
 
     </script>
 </body>
