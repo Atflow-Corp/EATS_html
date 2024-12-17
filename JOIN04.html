@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Logo.png" type="image/png">
+    <link rel="stylesheet" href="main.css">
+    <title>회원 정보 입력</title>
+</head>
+<body>
+
+        <nav class="top-nav">
+            <div class="nav-container">
+                <div class="logo-area">
+                    <img src="img/logo.png" alt="Logo" class="logo">
+                    <img src="img/letters.svg" alt="Letters" class="letters">
+                </div>
+                <div class="login-area">
+                    <span class="login-text" id="loginText">로그인</span>
+                    <span class="user-name" id="userName" style="display: none;">사용자 이름</span>
+                </div>
+            </div>
+        </nav>
+        <main class="main-content">
+            <div class="box2">
+                <h1 class="title" style="margin-bottom: 32px;">회원 정보 입력</h1>
+                
+            <label for="name" class="name-label">이름</label>
+            <input type="text" id="name" class="styled-input" placeholder="이름 입력" oninput="checkInput()">
+            <p class="name-description" style="color: var(--Gray-600, #475467); font-size: 14px; font-style: normal; font-weight: 400; line-height: 20px;">정확한 실명을 입력해주세요. 추후 아이디/비밀번호를 찾기에 필요합니다.</p>
+
+            <div class="button-container" style="margin-top: 32px;">
+                <button class="previous-button" onclick="goToPrevious()">이전</button>
+                <button class="complete-button" id="completeButton" onclick="completeRegistration()" disabled>가입 완료</button>
+            </div>
+
+            
+            </div>
+            
+        </main>
+    </div>
+
+    <script>
+    function checkInput() {
+        const inputField = document.getElementById('name');
+        const completeButton = document.getElementById('completeButton');
+
+        // 인풋창에 글자가 하나 이상 있는지 확인
+        if (inputField.value.length > 0) {
+            completeButton.classList.add('active'); // active 클래스 추가
+            completeButton.removeAttribute('disabled'); // 버튼 활성화
+        } else {
+            completeButton.classList.remove('active'); // active 클래스 제거
+            completeButton.setAttribute('disabled', true); // 버튼 비활성화
+        }
+    }
+    </script>
+</body>
+</html> 
