@@ -78,7 +78,8 @@ body {
     align-items: center;
     gap: 32px;
     background: var(--White-100, #F9FAFB);
-   
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .title {
@@ -191,4 +192,348 @@ body {
     font-size: 16px;
     font-weight: 800;
     line-height: 24px; /* 150% */
+}
+
+.agree-button {
+    display: flex;
+    padding: 10px 18px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    border-radius: 8px;
+    border: 1px solid var(--Brand-200, #C7D7FE);
+    background: var(--Brand-200, #C7D7FE);
+    /* Shadow/xs */
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: var(--White-100, #F9FAFB);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24px; /* 150% */
+}
+
+.agree-button.active {
+    border: 1px solid var(--Brand-600, #444CE7);
+    background: var(--Brand-600, #444CE7);
+    /* Shadow/xs */
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: var(--White-100, #F9FAFB);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24px; /* 150% */
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    color: var(--Gray-700, #344054);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    margin-bottom: 10px;
+}
+
+.checkbox-label input {
+    margin-right: 12px; /* 체크박스와 문구 간격 12px 추가 */
+}
+
+.checkbox-label a {
+    color: #444CE7; /* 하이퍼링크 색상 */
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+.divider {
+    background: var(--White-100, #F9FAFB);
+    margin: 16px 0; /* 위아래 여백 */
+}
+
+.styled-input {
+    display: block; /* 인풋창을 블록 요소로 설정 */
+    width: 360px; /* 인풋창 너비 설정 */
+    padding: 10px 14px; /* 패딩 설정 */
+    align-items: center; /* 수직 정렬 */
+    gap: 8px; /* 요소 간 간격 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    border: 1px solid var(--Gray-300, #D0D5DD); /* 테두리 색상 */
+    background: var(--White-100, #F9FAFB); /* 배경 색상 */
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05); /* 그림자 효과 */
+}
+
+.name-label {
+    display: block; /* 라벨을 블록 요소로 설정 */
+    margin-bottom: 8px; /* 라벨과 인풋창 간의 간격 */
+}
+
+.complete-button {
+    display: flex;
+    padding: 10px 18px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    border-radius: 8px;
+    border: 1px solid var(--Brand-200, #C7D7FE);
+    background: var(--Brand-200, #C7D7FE);
+    /* Shadow/xs */
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: var(--White-100, #F9FAFB);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24px;
+}
+
+/* 활성화된 상태 스타일 */
+.complete-button.active {
+    border: 1px solid var(--Brand-600, #444CE7);
+    background: var(--Brand-600, #444CE7);
+    /* Shadow/xs */
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: var(--White-100, #F9FAFB);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24px; /* 150% */
+}
+
+.button-normal {
+    display: flex;
+    padding: 10px 18px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    border-radius: 8px;
+    border: 1px solid var(--Brand-600, #444CE7);
+    background: var(--Brand-600, #444CE7);
+    /* Shadow/xs */
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: var(--White-100, #F9FAFB);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24px; /* 150% */
+}
+
+.list-container {
+    margin-top: 24px; /* 리스트 박스 상단 여백 */
+    display: flex; /* 플렉스 박스 설정 */
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    align-items: flex-start; /* 아이템들을 왼쪽 정렬 */
+    justify-content: center; /* 전체 박스를 중앙 정렬 */
+    width: 100%; /* 전체 폭을 100%로 설정 */
+    max-width: 200px; /* 최대 폭을 200px로 설정 */
+    margin-left: auto; /* 좌우 여백 자동 설정 */
+    margin-right: auto; /* 좌우 여백 자동 설정 */
+}
+
+.list-item {
+    display: flex; /* 플렉스 박스 설정 */
+    align-items: center; /* 수직 정렬 */
+    margin-bottom: 32px; /* 각 항목 간의 간격 */
+    color: var(--Gray-500, #667085);
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px; /* 150% */
+}
+
+.license-key-message {
+    text-align: center; /* 중앙 정렬 */
+    margin-top: 32px; /* 상단 여백 */
+}
+
+.license-key-message a {
+    color: var(--Brand-700, #3538CD); /* 하이퍼링크 색상 */
+    font-family: Pretendard; /* 폰트 패밀리 */
+    font-size: 14px; /* 폰트 크기 */
+    font-style: normal; /* 폰트 스타일 */
+    font-weight: 800; /* 폰트 두께 */
+    line-height: 20px; /* 줄 높이 */
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+.centered-container {
+    text-align: center; /* 텍스트 중앙 정렬 */
+    margin: 0 auto; /* 좌우 여백 자동 설정 */
+    max-width: 600px; /* 최대 폭 설정 (필요에 따라 조정) */
+}
+
+.new-background {
+    width: 100%;
+    height: 100vh; /* 전체 화면 높이 */
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+    align-items: center; /* 중앙 정렬 */
+    background-color: #EEF4FF; /* 배경색 설정 */
+    background-image: url('img/bg.png'); /* 배경 이미지 설정 */
+    background-size: cover; /* 배경 이미지 크기 조정 */
+}
+
+.new-container {
+    display: flex; /* 좌우로 나뉘어진 블록 */
+    border-radius: 20px; /* 모서리 둥글게 */
+    background: var(--White-100, #F9FAFB); /* 배경색 */
+    box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03); /* 그림자 효과 */
+    width: 80%; /* 전체 블록 너비 */
+    max-width: 1200px; /* 최대 너비 설정 */
+}
+
+.new-left-block {
+    width: 40%; /* 너비 설정 */
+    height: auto; /* 높이 설정 */
+    flex-shrink: 0; /* 축소 비율 설정 */
+    background: var(--gradient-brand-80060090-deg, linear-gradient(63deg, #2D31A6 16.72%, #444CE7 83.39%)); /* 배경색 설정 */
+    padding: 80px; /* 좌우 80px 패딩 */
+    border-radius: 20px 0 0 20px; /* 좌상, 우상, 우하, 좌하 순서 */
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    justify-content: flex-start; /* 상단 정렬 */
+}
+
+.new-guide-image {
+    max-width: 100%; /* 이미지 크기 조정 */
+    height: auto; /* 비율 유지 */
+}
+
+.new-text-box {
+    margin-top: 32px; /* 텍스트 박스 상단 여백 */
+}
+
+.new-title {
+    color: var(--White-100, #F9FAFB); /* 타이틀 색상 */
+    font-size: 36px; /* 폰트 크기 */
+    font-style: normal; /* 폰트 스타일 */
+    font-weight: 400; /* 폰트 두께 */
+    line-height: 44px; /* 줄 높이 */
+    letter-spacing: -0.72px; /* 글자 간격 */
+}
+
+.new-title-bold {
+    color: var(--White-100, #F9FAFB); /* 타이틀 색상 */
+    font-size: 36px; /* 폰트 크기 */
+    font-style: normal; /* 폰트 스타일 */
+    font-weight: 800; /* 폰트 두께 */
+    line-height: 44px; /* 줄 높이 */
+    letter-spacing: -0.72px; /* 글자 간격 */
+}
+
+.new-right-block {
+    padding: 80px; /* 좌우 80px 패딩 */
+    display: flex;
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    justify-content: center; /* 중앙 정렬 */
+    align-items: center; /* 중앙 정렬 */
+    color: var(--Gray-700, #344054); /* 텍스트 색상 */
+}
+
+.info-list {
+    margin-top: 32px; /* 리스트 상단 여백 */
+    background-image: url('img/bgdot.png'); /* 배경 이미지 설정 */
+    background-position: right bottom; /* 우측 45px, 하단 위치 */
+    background-repeat: no-repeat; /* 배경 이미지 반복 방지 */
+    padding-bottom: 50px; /* 하단 여백 추가 (필요에 따라 조정) */
+}
+
+.list-item {
+    margin-bottom: 32px; /* 각 항목 간의 간격 */
+}
+
+.list-title {
+    color: var(--White-100, #F9FAFB); /* 타이틀 색상 */
+    font-size: 20px; /* 폰트 크기 */
+    font-style: normal; /* 폰트 스타일 */
+    font-weight: 800; /* 폰트 두께 */
+    line-height: 30px; /* 줄 높이 */
+    margin-bottom: 8px; /* 타이틀과 본문 간의 간격 설정 */
+}
+
+.list-content {
+    color: var(--White-80, #D0D5DD); /* 본문 색상 */
+    font-size: 14px; /* 폰트 크기 */
+    font-style: normal; /* 폰트 스타일 */
+    font-weight: 400; /* 폰트 두께 */
+    line-height: 20px; /* 줄 높이 */
+    margin-bottom: 32px;
+}
+
+.logo-container {
+    display: flex; /* 플렉스 박스 설정 */
+    align-items: center; /* 수직 중앙 정렬 */
+    margin-bottom: 10px; /* 하단 여백 설정 */
+}
+
+.logo-container img {
+    height: auto; /* 비율 유지 */
+}
+
+.right-block {
+    display: flex;
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    align-items: center; /* 중앙 정렬 */
+}
+
+.login-container {
+    margin-top: 32px; /* 상단 여백 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.input-label {
+    color: var(--Gray-700, #344054); /* 라벨 색상 */
+    font-size: 14px; /* 폰트 크기 */
+    font-style: normal; /* 폰트 스타일 */
+    font-weight: 400; /* 폰트 두께 */
+    line-height: 20px; /* 줄 높이 */
+    margin-bottom: 6px; /* 라벨과 인풋창 간의 간격 */
+    display: block; /* 블록 요소로 설정하여 줄바꿈 */
+}
+
+.login-input {
+    width: 100%; /* 입력 필드 너비 100% */
+    padding: 10px; /* 패딩 */
+    margin-bottom: 20px; /* 이메일과 비밀번호 간의 간격 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    border: 1px solid var(--Gray-300, #D0D5DD); /* 테두리 */
+    background: var(--White-100, #F9FAFB); /* 배경색 */
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05); /* 그림자 */
+    color: var(--Gray-500, #667085); /* 텍스트 색상 */
+    font-size: 16px; /* 폰트 크기 */
+    font-style: normal; /* 폰트 스타일 */
+    font-weight: 400; /* 폰트 두께 */
+    line-height: 24px; /* 줄 높이 */
+}
+
+.login-button {
+    width: 100%; /* 버튼 너비 100% */
+    padding: 10px; /* 패딩 */
+    background-color: #007BFF; /* 버튼 배경색 */
+    color: white; /* 버튼 텍스트 색상 */
+    border: none; /* 테두리 없음 */
+    border-radius: 4px; /* 모서리 둥글게 */
+    cursor: pointer; /* 커서 포인터 */
+}
+
+.login-button:hover {
+    background-color: #0056b3; /* 버튼 호버 색상 */
+}
+
+.footer-box {
+    display: flex; /* 플렉스 박스 설정 */
+    justify-content: space-between; /* 양쪽 끝 정렬 */
+    display: flex;
+    padding: 24px 48px;
+    align-items: flex-start;
+    gap: 56px;
+    align-self: stretch;
+
+}
+.password-recovery-link {
+    text-decoration: none; /* 밑줄 제거 */
+    color: var(--Brand-700, #3538CD); /* 링크 색상 */
+    font-family: Pretendard; /* 폰트 패밀리 */
+    font-size: 14px; /* 폰트 크기 */
+    font-style: normal; /* 폰트 스타일 */
+    font-weight: 800; /* 폰트 두께 */
+    line-height: 20px; /* 줄 높이 */
 }
