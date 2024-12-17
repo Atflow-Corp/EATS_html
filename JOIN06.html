@@ -8,7 +8,6 @@
     <title>검사기기 연결</title>
 </head>
 <body>
-
         <nav class="top-nav">
             <div class="nav-container">
                 <div class="logo-area">
@@ -22,19 +21,16 @@
             </div>
         </nav>
         <main class="main-content">
-            <div class="box2">
+            <div class="box1200">
                 <h1 class="title" style="margin-bottom: 32px;">회원 가입이 완료되었습니다!<br> 이제 검사 기기를 연결해주세요. </h1>
-                
                
-
                 <!-- 추가된 텍스트와 이미지 -->
                 <div class="centered-container" style="text-align: center; margin: 0 auto; max-width: 600px;">
-                    <div class="thank-you-message" style="margin-top: 32px;">
+                    <div class="box1200" style="margin-top: 32px;">
                         <p style="color: var(--Gray-700, #344054); font-family: Pretendard; font-size: 16px; font-style: normal; font-weight: 400; line-height: 24px;">
                             검사 기기에서 로그인한 후 구입 시 받은 라이선스를 입력해주세요. <br>라이선스 입력 시 EATS 웹사이트와 자동으로 연동됩니다.
                         </p>
                     </div>
-
                     <div class="list-container" style="margin-top: 24px;">
                         <div class="list-item" style="display: flex; align-items: center; margin-bottom: 24px;">
                             <img src="img/check.svg" alt="Checked" style="width: 20px; height: 20px; margin-right: 12px;">
@@ -61,6 +57,17 @@
             
         </main>
     </div>
-
+    <script>
+        // Lottie 애니메이션 설정
+        const animationContainer = document.getElementById('lottie-container');
+    
+        lottie.loadAnimation({
+            container: animationContainer, // 애니메이션을 표시할 컨테이너
+            renderer: 'svg', // 렌더링 방식: svg, canvas, html 중 선택 가능
+            loop: true, // 애니메이션 반복 여부
+            autoplay: true, // 자동 재생 여부
+            path: 'Animation - 1734427553032.json' // Lottie JSON 파일 경로
+        });
+    </script>
 </body>
 </html> 
