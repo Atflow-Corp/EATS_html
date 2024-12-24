@@ -1,4 +1,13 @@
 /* main.css */
+html, body {
+    overflow: auto; /* 스크롤 가능 */
+    height: auto; /* 높이 자동 조정 */
+}
+
+.new-container {
+    overflow: visible; /* 스크롤 가능하도록 설정 */
+}
+
 body {
     background: var(--Gray-100, #F2F4F7);
     font-family: 'Pretendard', sans-serif;
@@ -568,7 +577,10 @@ input[type="checkbox"]:focus {
 
 .new-background {
     width: 100%;
-    height: 100vh; /* 전체 화면 높이 */
+    min-height: 100vh; /* 모바일에서 동적으로 높이를 조정 */
+    height: auto; /* 높이 자동 조정 */
+    padding: 16px; /* 모바일 화면에서 여백 추가 */
+    box-sizing: border-box; /* 패딩 포함 높이 계산 */
     display: flex;
     justify-content: center; /* 중앙 정렬 */
     align-items: center; /* 중앙 정렬 */
@@ -1794,4 +1806,39 @@ line-height: 28px; /* 155.556% */
     font-weight: 800;
     line-height: 24px; /* 150% */
     cursor: pointer; /* 커서 포인터 */
+}
+
+/* 모바일 (480px 이하) */
+@media (max-width: 480px) {
+    .new-container {
+        flex-direction: column; /* 좌우가 아닌 위아래로 쌓이도록 설정 */
+        width: 100%; /* 전체 화면 너비로 확장 */
+        max-width: none; /* 최대 너비 제한 해제 */
+        padding: 16px; /* 좌우 여백 추가 */
+    }
+
+    .new-left-block, .new-right-block {
+        width: 100%; /* 각 블록이 전체 너비를 차지 */
+        padding: 16px; /* 내부 여백 추가 */
+        border-radius: 8px; /* 모바일에서 둥근 모서리 설정 */
+    }
+
+    .new-left-block {
+        border-radius: 8px 8px 0 0; /* 상단만 둥글게 */
+    }
+
+    .new-right-block {
+        border-radius: 0 0 8px 8px; /* 하단만 둥글게 */
+    }
+
+    .login-container {
+        max-width: 100%; /* 부모 컨테이너의 너비에 맞춤 */
+        margin: 0 auto; /* 중앙 정렬 */
+        padding: 12px; /* 내부 여백 */
+    }
+
+    .button-container {
+        flex-direction: column; /* 버튼을 세로로 배치 */
+        gap: 8px; /* 버튼 간 간격 */
+    }
 }
