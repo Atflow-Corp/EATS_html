@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Logo.png" type="image/png">
+    <link rel="stylesheet" href="main.css">
+    <title>회원상세</title>
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="logo-area">
+                <img src="img/Logo.png" alt="Logo" class="logo">
+                <img src="img/letters.svg" alt="Letters" class="letters">
+            </div>
+            <div class="login-area">
+                <span class="login-text" id="loginText" style="display: none;" >로그인</span>
+                <div class="user-info" id="userInfo">
+                    <img src="img/profile.svg" alt="프로필" class="profile-icon">
+                    <span class="user-name">사용자 이름</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="main-detail">
+        <div class="breadcrumb-box">
+            <a href="PAT02.html" class="breadcrumb-content">
+                <img src="img/arrow_left_pat05.svg" width="20px" height="20px" alt="뒤로">
+                <span>뒤로</span>
+            </a>
+        </div>
+        <div class="new-detail">
+            <div class="detail-left">
+                <div class="name-block">
+                <div class="patient-name">김*순</div>
+        <button class="delete-button" onclick="openModal('김*순', event)">
+            <img src="img/trash-2.svg" class="button-delete" alt="삭제" width="24px" height="24px">
+        </button></div>
+            <div class="patient-number">193884</div>
+            <div class="patient-info">
+                <div class="patient-block">
+                <label class="input-label">나이</label>
+                <label class="age-label">1Y (20M)</label>
+            </div>
+                <div class="patient-block">
+                    <label class="input-label">생년월일</label>
+                    <input type="date" class="styled-input" value="1980-12-30"> <!-- 차트 생년월일 표시 -->
+                </div>
+                <div class="patient-block">
+                    <label class="input-label">성별</label>
+                    <select class="gender-select styled-input">
+                        <option value="남성" selected>남성</option>
+                        <option value="여성">여성</option>
+                    </select>
+                </div>
+                <div class="patient-block">
+                    <label class="input-label">메모</label>
+                    <input type="text" class="styled-input" placeholder="메모 입력">
+                </div>
+            </div>
+            </div>
+            <div class="detail-right">
+                <div class="pat05-title">검사 준비가 완료됐습니다</div>
+                <div class="pat05-desc">검사 기기로 환자 정보를 보냈습니다. 기기에서 검사가 완료되면 이곳에 결과 리포트가 표시됩니다.</div>
+                <div><img src="img/pat05_ready.svg"></div><div><button class="pat05-button">검사 준비 철회하기</button></div>
+
+            </div>
+        </div></div>
+        </main>
+    </main>
+   
+</body>
+</html>
