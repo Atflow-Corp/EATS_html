@@ -94,7 +94,151 @@ input[type="checkbox"]:focus {
     background: var(--White-100, #F9FAFB);
     box-shadow: 1px 0px 0px 0px #EAECF0 inset, -1px 0px 0px 0px #EAECF0 inset;
 }
-
+/*마이페이지에서 사용*/
+.main-my{
+    display: flex;
+    width: 1200px;
+    padding: 32px 0px 48px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    flex: 1 0 0;
+    min-height: 880px;
+    background: var(--White-100, #F9FAFB);
+    box-shadow: 1px 0px 0px 0px #EAECF0 inset, -1px 0px 0px 0px #EAECF0 inset;
+}
+.main2nd-my{
+    display: flex;
+    padding: 0px 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+.my-header{
+    width: 100%;
+    display: flex;
+    padding-bottom: 1px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+    border-bottom: #EAECF0;
+}
+.my-container{
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    gap: 16px; /* 각 행 간 간격 */
+    width: 100%;
+    padding: 24px 0px 24px 0px;
+    border-bottom: #EAECF0;
+    box-sizing: border-box; /* 패딩 포함 크기 계산 */
+}
+.my-row {
+    display: flex;
+    justify-content: space-between; /* 좌우 끝 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    width: 100%; /* 컨테이너 너비 */
+    padding: 24px 0px 24px 0px;
+    border-bottom: 1px solid #EAECF0; /* 아래쪽 보더라인 추가 */
+}
+.my-box span {
+    display: inline-flex; /* 플렉스 컨텍스트 생성 */
+    align-items: center; /* 수직 중앙 정렬 */
+    line-height: normal; /* 필요 시 줄 높이 초기화 */
+    height: 36px;
+}
+.my-title{
+    color: var(--Gray-900, #101828);
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 38px; /* 126.667% */
+}
+.my-label{
+    flex: 0 0 280px; /* 고정 너비로 설정 */
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    color: var(--Gray-700, #344054);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 20px; /* 142.857% */
+}
+.my-box{
+    display: flex; /* 수평 정렬 */
+    flex: 1; /* 남은 공간 차지 */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+    color: var(--Gray-900, #101828);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    height: 100%; /* 부모 컨테이너 높이를 기준으로 중앙 정렬 */
+}
+.my-vbox{
+    display: flex; /* 수평 정렬 */
+    flex: 1; /* 남은 공간 차지 */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    color: var(--Gray-900, #101828);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    height: 100%; /* 부모 컨테이너 높이를 기준으로 중앙 정렬 */
+}
+.button1-my{
+    display: flex;
+    padding: 8px 14px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--Brand-50, #EEF4FF);
+    background: var(--Brand-50, #EEF4FF);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: var(--Brand-700, #3538CD);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 20px; /* 142.857% */
+    cursor: pointer; /* 커서 포인터 */
+}
+.button2-my{
+    display: flex;
+    width: 200px;
+    height: 44px;
+    padding: 10px 18px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer; /* 커서 포인터 */
+    border-radius: 8px;
+    border: 1px solid var(--Error-500, #F04438);
+    background: var(--Error-500, #F04438);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: var(--White-100, #F9FAFB);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24px; /* 150% */
+    
+}
+.desc-my{
+    color: var(--Gray-500, #667085);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    align-self: stretch;
+}
+/*환자 목록 에서 사용*/
 .table-content {
     display: flex;
     flex-direction: column;
@@ -1269,6 +1413,14 @@ input[type="checkbox"]:focus {
     box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03);
     text-align: left;
 }
+.modal-content label.password {
+    display: block; /* 라벨을 블록 요소로 변경 */
+    margin-top: 20px; /* 라벨과 입력 필드 사이 간격 */
+    margin-bottom: 6px; /* 라벨과 입력 필드 사이 간격 */
+    font-size: 14px;
+    color: var(--Gray-700, #344054);
+    font-weight: 400;
+}
 
 .modal-register{
     width: 640px;
@@ -1421,6 +1573,13 @@ input[type="checkbox"]:focus {
 /* 선택된 버튼의 호버 효과 */
 .btn-check:checked + .gender-btn:hover {
     background: #D6E4FF;
+}
+.password {
+    color: var(--Gray-700, #344054);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
 }
 .form-control {
     width: 100%;

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Logo.png" type="image/png">
+    <link rel="stylesheet" href="main.css">
+    <title>회원상세</title>
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="logo-area">
+                <img src="img/Logo.png" alt="Logo" class="logo">
+                <img src="img/letters.svg" alt="Letters" class="letters">
+            </div>
+            <div class="login-area">
+                <span class="login-text" id="loginText" style="display: none;" >로그인</span>
+                <div class="user-info" id="userInfo">
+                    <img src="img/profile.svg" alt="프로필" class="profile-icon">
+                    <span class="user-name">사용자 이름</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="main-my">
+        <div class="main2nd-my">
+       <div class="my-header">
+            <div class="my-title">내 정보</div>
+            <div class="my-container">
+                <div class="my-row">
+                    <div class="my-label">아이디</div>
+                    <div class="my-box">
+                        <span>wb.kim@gmail.com</span>
+                        <button class="button1-my" onclick="openPasswordModal()">비밀번호 변경</button>
+                    </div>                    
+                </div>
+                <div class="my-row">
+                    <div class="my-label">이름</div>
+                    <div class="my-box">김우빈</div>
+                </div>
+                <div class="my-row">
+                    <div class="my-label">라이선스</div>
+                    <div class="my-box"><span>0000-0000-0000-0000</span>
+                        <button class="button1-my" onclick="openLicenseDelModal()">라이선스 삭제</button></div>
+                </div>
+                <div class="my-row">
+                <div class="my-label">소속 병원</div>
+                <div class="my-vbox"><span>한빛소아과</span>
+                    <div class="desc-my">소속 병원 정보는 라이선스에 부여되어 있습니다. 수정하려면 고객센터로 문의해주세요.<br>cs@eats.kr 또는 1500-0000</div>
+                </div>
+                
+            </div>
+            <div><button class="button2-my" onclick="openDelaccountModal()">탈퇴하기</button></div>
+            </div>
+            
+       </div>
+            
+    </div>
+    </main>
+    <!-- 비밀번호 변경 모달 -->
+<div id="password-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <div class="h2">비밀번호 변경</div>
+        <label class="password">현재 비밀번호</label>
+        <input type="password" id="current-password" class="styled-input" placeholder="현재 비밀번호 입력">
+
+        <label class="password">새 비밀번호</label>
+        <input type="password" id="new-password" class="styled-input" placeholder="새 비밀번호 입력">
+
+        <label class="password">새 비밀번호 확인</label>
+        <input type="password" id="confirm-password" class="styled-input" placeholder="새 비밀번호 확인">
+
+        <div class="modal-actions">
+           
+            <button class="cancel-button" onclick="closePasswordModal()">취소</button>
+            <button class="confirm-button" onclick="changePassword()">저장</button>
+        </div>
+    </div>
+</div>
+    <!--라이센스 삭제 모달 -->
+    <div id="licensedel-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="h2">라이선스를 삭제하시겠습니까?</div>
+            <div class="input-label">라이선스를 삭제하면 검사 기기에서도 라이선스가 제거되며, 다시 사용하려면 로그인 후 라이선스 인증을 다시 진행해야 합니다. 또한, 라이선스를 삭제하면 모든 환자 데이터가 영구적으로 삭제되며 복구할 수 없습니다.
+                </div>
+            <div class="modal-actions">
+               
+                <button class="cancel-button" onclick="closeLicenseDelModal()">취소</button>
+                <button class="button2-my">삭제</button>
+            </div>
+        </div>
+    </div>
+
+     <!--계정 삭제 모달 -->
+     <div id="delaccount-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="h2">정말로 탈퇴하시겠습니까?</div>
+            <div class="input-label"> 계정을 탈퇴하시면 모든 데이터는 영구적으로 삭제되며, <br>복구할 수 없습니다.</div>
+    
+            <div class="modal-actions">
+               
+                <button class="cancel-button" onclick="closeDelaccountModal()">취소</button>
+                <button class="button2-my">탈퇴하기</button>
+            </div>
+        </div>
+    </div>
+    <script src="path/to/your-script.js"></script>
+
+<script>
+    // 모든 모달 닫기
+function closeAllModals() {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach((modal) => {
+        modal.style.display = 'none'; // 모든 모달 숨김
+    });
+}
+  function openPasswordModal() {
+    document.getElementById('password-modal').style.display = 'flex'; // 모달 열기
+}
+
+function closePasswordModal() {
+    document.getElementById('password-modal').style.display = 'none'; // 모달 닫기
+}
+
+function changePassword() {
+    const currentPassword = document.getElementById('current-password').value;
+    const newPassword = document.getElementById('new-password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
+
+    if (!currentPassword || !newPassword || !confirmPassword) {
+        alert('모든 필드를 입력하세요.');
+        return;
+    }
+
+    if (newPassword !== confirmPassword) {
+        alert('새 비밀번호가 일치하지 않습니다.');
+        return;
+    }
+
+    // 서버와 통신하는 로직을 추가하세요.
+    alert('비밀번호가 변경되었습니다.');
+    closePasswordModal(); // 모달 닫기
+}
+
+// 라이선스 삭제 모달 열기 및 닫기
+
+function openLicenseDelModal() {
+    closeAllModals(); // 다른 모달 닫기
+    const modal = document.getElementById('licensedel-modal');
+    if (modal) {
+        modal.style.display = 'flex'; // 라이선스 삭제 모달 열기
+    } else {
+        console.error('licensedel-modal element not found!');
+    }
+}
+
+// 라이선스 삭제 모달 닫기
+function closeLicenseDelModal() {
+    const modal = document.getElementById('licensedel-modal');
+    if (modal) {
+        modal.style.display = 'none'; // 라이선스 삭제 모달 닫기
+    } else {
+        console.error('licensedel-modal element not found!');
+    }
+}
+
+// 계정 삭제 모달 열기
+function openDelaccountModal() {
+    closeAllModals(); // 다른 모달 닫기
+    const modal = document.getElementById('delaccount-modal');
+    if (modal) {
+        modal.style.display = 'flex'; // 계정 삭제 모달 열기
+    } else {
+        console.error('delaccount-modal element not found!');
+    }
+}
+
+// 계정 삭제 모달 닫기
+function closeDelaccountModal() {
+    const modal = document.getElementById('delaccount-modal');
+    if (modal) {
+        modal.style.display = 'none'; // 계정 삭제 모달 닫기
+    } else {
+        console.error('delaccount-modal element not found!');
+    }
+}
+
+</script>
+</body>
+</html>
