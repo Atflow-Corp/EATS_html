@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Logo.png" type="image/png">
+    <link rel="stylesheet" href="main2.css">
+    <title>라이선스 입력</title>
+</head>
+<body>
+    <div class="device-background">
+    <div class="block2-center">
+        <div class="h2">라이선스 입력</div>
+        <div class="h3">EATS를 시작하려면 라이선스 키가 필요합니다.<br>구입 시 받은 라이센스를 입력해주세요.</div>
+        <div class="license-container">
+            <input class="signin-module" type="text" placeholder="영문, 숫자 조합 00자리">
+            <button class="confirm-button">확인</button>
+        </div>
+        
+        <div><button id="complete-popup-btn" class="button-basic" onclick="openConfirmLicenseModal()">완료 팝업 임시</button><p><button class="button-basic">에러 팝업 임시</button></div>
+        <div class="spacer"></div>
+        <img src="img/logo.svg" width="102px" height="auto">
+    </div>
+   
+    </div>
+     <!-- 승인 모달 팝업 -->
+     <div id="confirm-modal" class="modal">
+        <div class="modal-content">
+        <!-- 타이틀 -->
+        <div class="modal-title">라이선스가 확인되었습니다.</div>
+        <!-- 본문 -->
+        <div class="modal-desc">한빛소아과 김우빈님, 이제 서비스의 모든 기능을 자유롭게 이용하실 수 있습니다. </div>
+            <button class="modal-btn" onclick="closeConfirmLicenseModal()">확인</button>
+            </div>
+        </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const inputField = document.querySelector(".signin-module");
+            const confirmButton = document.querySelector(".confirm-button");
+    
+            inputField.addEventListener("input", () => {
+                if (inputField.value.trim().length > 0) {
+                    confirmButton.disabled = false;
+                } else {
+                    confirmButton.disabled = true;
+                }
+            });
+    
+            // Ensure button is initially disabled
+            confirmButton.disabled = true;
+        });
+       // Function to open the confirm license modal
+    function openConfirmLicenseModal() {
+        const modal = document.getElementById('confirm-modal');
+        modal.style.display = 'flex'; // Make the modal visible
+    }
+
+    // Function to close the confirm license modal
+    function closeConfirmLicenseModal() {
+        const modal = document.getElementById('confirm-modal');
+        modal.style.display = 'none'; // Hide the modal
+    }
+    </script>
+    
+</body>
+    
