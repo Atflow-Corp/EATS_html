@@ -291,3 +291,105 @@ input[type="checkbox"]:checked::after {
     margin-top:32px;
     cursor: pointer;
 }
+/*LOGIN03~06*/
+.mega-input{
+    display: flex;
+    width: 144px;
+    height: 144px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 24px;
+    border: 1px solid var(--BG2, #343338);
+    background: var(--BG2, #343338);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: var(--White-100, #F9FAFB);
+    text-align: center;
+    /* Display 2xl/Bold */
+    font-family: Inter;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90px; /* 125% */
+    letter-spacing: -1.44px;
+    box-sizing: border-box;
+}
+.mega-input:focused,valid{
+    width: 144px!important;
+    height: 144px!important;
+    border-radius: 24px;
+    border: 1px solid var(--Brand-400, #8098F9);
+    background: var(--BG2, #343338);
+/* Shadow/xs */
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: var(--Brand-600, #444CE7);
+    text-align: center;
+/* Display 2xl/Bold */
+    font-family: Inter;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90px; /* 125% */
+    letter-spacing: -1.44px;
+}
+.mega-input:error{
+    width: 144px!important;
+    height: 144px!important;
+    border-radius: 24px;
+    border: 1px solid var(--Error-400, #F97066);
+    background: var(--BG2, #343338);
+    /* Shadow/xs */
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: var(--Error-600, #D92D20);
+    text-align: center;
+    /* Display 2xl/Bold */
+    font-family: Inter;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90px; /* 125% */
+    letter-spacing: -1.44px;
+}
+.mega-container{
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+.mega-input.error {
+    width: 144px!important;
+    height: 144px!important;
+    border-radius: 24px;
+    border: 1px solid var(--Error-400, #F97066);
+    background: var(--BG2, #343338);
+    /* Shadow/xs */
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: var(--Error-600, #D92D20);
+    text-align: center;
+    /* Display 2xl/Bold */
+    font-family: Inter;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90px; /* 125% */
+    letter-spacing: -1.44px;
+}
+.mega-input.readonly {
+    pointer-events: none; /* 클릭 비활성화 */
+    cursor: default; /* 기본 커서 표시 */
+    user-select: none; /* 텍스트 선택 불가능 */
+    background-color: var(--BG2, #343338); /* 배경 유지 */
+    color: var(--White-100, #F9FAFB); /* 텍스트 색상 유지 */
+    border: 1px solid var(--BG2, #343338); /* 보더 유지 */
+    box-shadow: none; /* 추가 그림자 제거 */
+}
+.mega-input::-webkit-scrollbar {
+    display: none; /* 스크롤바 숨김 */
+}
+.mega-input {
+    overflow: hidden; /* 스크롤 동작 차단 */
+}
