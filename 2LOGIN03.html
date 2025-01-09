@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Logo.png" type="image/png">
+    <link rel="stylesheet" href="main2.css">
+    <title>라이선스 입력</title>
+</head>
+<body>
+    <div class="device-background">
+    <div class="block2-center">
+        
+        <div class="h2">PIN번호 설정</div>
+        <div class="h3">이 기기를 활성화할 때 사용할 PIN 번호를 입력해주세요.</div>
+        <div class="mega-container">
+            <input id="pin1" class="mega-input" type="password" maxlength="1" oninput="moveToNextInput(this, 'pin2')">
+            <input id="pin2" class="mega-input" type="password" maxlength="1" oninput="moveToNextInput(this, 'pin3')" onkeydown="moveToPrevInput(event, 'pin1')">
+            <input id="pin3" class="mega-input" type="password" maxlength="1" oninput="moveToNextInput(this, 'pin4')" onkeydown="moveToPrevInput(event, 'pin2')">
+            <input id="pin4" class="mega-input" type="password" maxlength="1" oninput="moveToNextInput(this, 'pin5')" onkeydown="moveToPrevInput(event, 'pin3')">
+            <input id="pin5" class="mega-input" type="password" maxlength="1" oninput="moveToNextInput(this, 'pin6')" onkeydown="moveToPrevInput(event, 'pin4')">
+            <input id="pin6" class="mega-input" type="password" maxlength="1" onkeydown="moveToPrevInput(event, 'pin5')">
+        </div>
+        
+     
+        
+  
+        <div class="spacer"></div>
+        <img src="img/2logo.svg" width="102px" height="auto">
+    </div>
+   
+    </div>
+    
+    <script>
+        // Move to the next input field
+        function moveToNextInput(current, nextId) {
+            if (current.value.length === 1) {
+                document.getElementById(nextId)?.focus();
+            }
+        }
+    
+        // Move to the previous input field on backspace
+        function moveToPrevInput(event, prevId) {
+            if (event.key === 'Backspace' && event.target.value.length === 0) {
+                document.getElementById(prevId)?.focus();
+            }
+        }
+    
+        // Error handling for invalid inputs
+        function validatePin() {
+            const inputs = document.querySelectorAll('.mega-input');
+            let isValid = true;
+    
+            inputs.forEach(input => {
+                if (!/^\d$/.test(input.value)) {
+                    input.style.borderColor = '#F97066'; // Error border color
+                    input.style.color = '#D92D20'; // Error text color
+                    isValid = false;
+                } else {
+                    input.style.borderColor = '#8098F9'; // Reset border color
+                    input.style.color = '#444CE7'; // Reset text color
+                }
+            });
+    
+            return isValid;
+        }
+    </script>
+    
+  
+</body>
+    </html>
