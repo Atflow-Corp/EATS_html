@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Logo.png" type="image/png">
+    <link rel="stylesheet" href="main2.css">
+    <title>PIN 입력</title>
+</head>
+<body>
+    <div class="block-head"><img id="menu-icon" src="img/more.svg" alt="메뉴 아이콘"></div>
+    <div id="menu" class="menu hidden">
+        <ul>
+            <!-- 현재 로그인한 계정 -->
+            <li id="current-account" class="current-account"><strong>abcd@abc.com</strong></li>
+            <!-- 다른 계정 목록 -->
+            <li class="account-list">
+                <span>계정 전환:</span>
+                <ul id="other-accounts">
+                    <!-- JavaScript로 동적으로 계정 추가 -->
+                </ul>
+            </li>
+            <!-- 로그아웃 -->
+            <li class="logout">로그아웃</li>
+            <!-- 계정 추가 -->
+            <li class="add-account">+ 계정 추가</li>
+        </ul>
+    </div>
+    <div class="device-background">
+       
+    <div class="block3-center">
+        
+        <div class="h2">PIN번호 입력</div>
+        <div class="h3-error">입력하신 PIN 번호가 일치하지 않습니다. 다시 시도해 주세요.(1/5)</div>
+        <div class="mega-container">
+            <input id="pin1" class="mega-input error" type="password" maxlength="1" oninput="moveToNextInput(this, 'pin2')">
+            <input id="pin2" class="mega-input error" type="password" maxlength="1" oninput="moveToNextInput(this, 'pin3')" onkeydown="moveToPrevInput(event, 'pin1')">
+            <input id="pin3" class="mega-input error" type="password" maxlength="1" oninput="moveToNextInput(this, 'pin4')" onkeydown="moveToPrevInput(event, 'pin2')">
+            <input id="pin4" class="mega-input error" type="password" maxlength="1" oninput="moveToNextInput(this, 'pin5')" onkeydown="moveToPrevInput(event, 'pin3')">
+            <input id="pin5" class="mega-input error" type="password" maxlength="1" oninput="moveToNextInput(this, 'pin6')" onkeydown="moveToPrevInput(event, 'pin4')">
+            <input id="pin6" class="mega-input error" type="password" maxlength="1" onkeydown="moveToPrevInput(event, 'pin5')">
+        </div>
+        <div class="forget-pin"><a href="">PIN 번호를 잊으셨나요?</a></div>
+     
+        
+  
+        <div class="spacer"></div>
+        <img src="img/2logo.svg" width="102px" height="auto">
+    </div>
+   
+    </div>
+    
+    <script>
+        // Move to the next input field
+        function moveToNextInput(current, nextId) {
+            if (current.value.length === 1) {
+                document.getElementById(nextId)?.focus();
+            }
+        }
+    
+        // Move to the previous input field on backspace
+        function moveToPrevInput(event, prevId) {
+            if (event.key === 'Backspace' && event.target.value.length === 0) {
+                document.getElementById(prevId)?.focus();
+            }
+        }
+    
+        // Error handling for invalid inputs
+        function validatePin() {
+            const inputs = document.querySelectorAll('.mega-input');
+            let isValid = true;
+    
+            inputs.forEach(input => {
+                if (!/^\d$/.test(input.value)) {
+                    input.style.borderColor = '#F97066'; // Error border color
+                    input.style.color = '#D92D20'; // Error text color
+                    isValid = false;
+                } else {
+                    input.style.borderColor = '#8098F9'; // Reset border color
+                    input.style.color = '#444CE7'; // Reset text color
+                }
+            });
+    
+            return isValid;
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+    const menuIcon = document.getElementById("menu-icon");
+    const menu = document.getElementById("menu");
+
+    menuIcon.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+
+    // 다른 곳을 클릭하면 메뉴 닫기
+    document.addEventListener("click", (event) => {
+        if (!menu.contains(event.target) && event.target !== menuIcon) {
+            menu.classList.add("hidden");
+        }
+    });
+});
+document.addEventListener("DOMContentLoaded", () => {
+    const currentAccountElement = document.getElementById("current-account");
+    const otherAccounts = ["efdgd@abc.com", "test123@abc.com", "example@abc.com"]; // 초기 계정 리스트
+    const otherAccountsList = document.getElementById("other-accounts");
+
+    // 다른 계정 동적으로 추가
+    otherAccounts.forEach((account) => {
+        const accountItem = document.createElement("li");
+        accountItem.textContent = account;
+        accountItem.classList.add("switch-account");
+        accountItem.addEventListener("click", () => {
+            // 현재 계정 업데이트
+            const currentAccount = currentAccountElement.querySelector("strong").textContent;
+            currentAccountElement.querySelector("strong").textContent = account;
+
+            // 선택한 계정을 다른 계정 리스트로 이동
+            accountItem.textContent = currentAccount;
+            otherAccountsList.appendChild(accountItem);
+
+            alert(`계정 전환 완료: ${account}`);
+        });
+        otherAccountsList.appendChild(accountItem);
+    });
+
+    // 로그아웃 이벤트
+    document.querySelector(".logout").addEventListener("click", () => {
+        alert("로그아웃 되었습니다.");
+    });
+
+    // 계정 추가 이벤트
+    document.querySelector(".add-account").addEventListener("click", () => {
+        alert("새 계정을 추가합니다.");
+    });
+});
+
+
+    </script>
+    
+  
+</body>
+    </html>
