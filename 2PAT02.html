@@ -33,7 +33,6 @@
         <div class="h2">검사할 환자를 선택해주세요.</div>
         <div class="h3">검사 결과 분석이 완료된 환자는 목록에서 제외됩니다.</div>
     <div class="patient-container">
-             <!-- 활성화된 환자 카드 -->
     <!-- 활성화된 환자 카드 -->
 <a href="/patient-exam" class="patient-card active">
     <div class="patient-name">김*한</div>
@@ -55,9 +54,27 @@
                 <img src="img/user_pat.svg" width="80px">
             </div>
         </div>
+    </div>    
+        <!--테스트영역-->
+<a href="/patient-exam" class="patient-card active">
+    <div class="patient-name">박*수</div>
+    <div class="patient-number">123456</div>
+    <div class="patient-card-content">
+        <span></span>
+        <div class="patient-icon">
+            <img src="img/user_pat.svg" width="80px">
+        </div>
     </div>
-    </div>
+</a>
+<!-- 반복 -->
+
+
+
 </div>
+
+</div>
+
+
         <script>
             document.addEventListener("DOMContentLoaded", () => {
     // 특정 조건에 따라 스크롤 활성화/비활성화
@@ -127,19 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
                     })
-                    document.addEventListener("DOMContentLoaded", () => {
-    const patientCards = document.querySelectorAll(".patient-card");
-
-    patientCards.forEach((card, index) => {
-        if (index < 2) {
-            card.style.width = "660px";
-        } else if (index === 2) {
-            card.style.width = "432px";
-        } else {
-            card.style.width = "318px";
-        }
-    });
-});
+                    
 
 </script></div>
 
