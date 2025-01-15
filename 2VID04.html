@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Logo.png" type="image/png">
+    <link rel="stylesheet" href="main2.css">
+    <title>화면조정</title>
+</head>
+<body><div class="content">
+    
+    <div class="device-background">
+       
+    <div class="block3-center">
+        <div class="h2">5초 후 화면 조정을 시작합니다.</div>
+        <div class="h3">1. 다음 화면에서 대상자의 얼굴 크기를 맞춘 후 <font color="#444CE7">[CALIBRATE]</font>을 선택하세요.<p>2. 대상자는 움직이는 점을 쳐다보세요. 보호자는 눈을 가립니다.<p>3. 재조정이 필요없으면 <font color="#444CE7">[USE CALIBRATION]</font>을 선택해주세요.</div>
+            <div class="h3" id="countdown">5</div>
+
+        <script>
+            //카운트 다운
+            document.addEventListener("DOMContentLoaded", () => {
+        let countdownElement = document.getElementById("countdown");
+        let countdownValue = 5; // 카운트다운 시작값
+
+        const countdownInterval = setInterval(() => {
+            countdownValue--;
+            countdownElement.textContent = countdownValue;
+
+            if (countdownValue <= 0) {
+                clearInterval(countdownInterval);
+                countdownElement.textContent = "시작합니다!";
+            }
+        }, 1000); // 1초마다 실행
+    });
+                    document.addEventListener("DOMContentLoaded", () => {
+    const menuIcon = document.getElementById("menu-icon");
+    const menu = document.getElementById("menu");
+
+    menuIcon.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+             // 다른 곳을 클릭하면 메뉴 닫기
+    document.addEventListener("click", (event) => {
+        if (!menu.contains(event.target) && event.target !== menuIcon) {
+            menu.classList.add("hidden");
+        }
+    });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const currentAccountElement = document.getElementById("current-account");
+    const otherAccounts = ["efdgd@abc.com", "test123@abc.com", "example@abc.com"]; // 초기 계정 리스트
+    const otherAccountsList = document.getElementById("other-accounts");
+
+    // 다른 계정 동적으로 추가
+    otherAccounts.forEach((account) => {
+        const accountItem = document.createElement("li");
+        accountItem.textContent = account;
+        accountItem.classList.add("switch-account");
+        accountItem.addEventListener("click", () => {
+            // 현재 계정 업데이트
+            const currentAccount = currentAccountElement.querySelector("strong").textContent;
+            currentAccountElement.querySelector("strong").textContent = account;
+
+            // 선택한 계정을 다른 계정 리스트로 이동
+            accountItem.textContent = currentAccount;
+            otherAccountsList.appendChild(accountItem);
+
+            alert(`계정 전환 완료: ${account}`);
+        });
+        otherAccountsList.appendChild(accountItem);
+    });
+
+    // 로그아웃 이벤트
+    document.querySelector(".logout").addEventListener("click", () => {
+        alert("로그아웃 되었습니다.");
+    });
+
+    // 계정 추가 이벤트
+    document.querySelector(".add-account").addEventListener("click", () => {
+        alert("새 계정을 추가합니다.");
+    });
+});
+                    })
+</script></div>
+
+        </body>
+        </html>
