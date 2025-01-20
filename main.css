@@ -90,6 +90,65 @@ input[type="checkbox"]:focus {
         height: auto;
     }
 }
+/* 드롭다운 메뉴 스타일 */
+.dropdown-menu {
+    display: block; /* 숨김 클래스가 제거되었을 때 표시 */
+    position: absolute;
+    top: 100%; /* 부모 요소 바로 아래 */
+    right: 0;
+    background: var(--White-100, #F9FAFB);
+    border: 1px solid var(--Gray-200, #EAECF0);
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 150px;
+    
+}
+.profile-link {
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit; /* 부모 요소의 색상 상속 */
+    cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+}
+
+.profile-link:hover {
+    text-decoration: none; /* Hover 상태에서도 밑줄 제거 */
+    color: inherit; /* Hover 상태에서도 부모 색상 유지 */
+}
+
+.dropdown-menu.hidden {
+    display: none; /* 기본적으로 숨김 */
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    font-size: 14px;
+    color: var(--Gray-700, #344054);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.dropdown-menu li:hover {
+    background-color: var(--Gray-100, #F2F4F7);
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        right: 10px; /* 오른쪽 여백 추가 */
+        width: 90%; /* 메뉴 너비를 화면에 맞춤 */
+    }
+
+    .dropdown-menu li {
+        font-size: 16px; /* 모바일에서 글씨 크기 조정 */
+        padding: 12px; /* 여백 증가 */
+    }
+}
 
 /* 추가: 기본 로고 및 로그인 스타일 */
 .logo-area {
@@ -1496,19 +1555,17 @@ input[type="checkbox"]:focus {
 
 /* 드롭다운 메뉴 */
 .dropdown-menu {
-    display: none;
+    display: block;
     position: absolute;
-    width: 110px;
-    top: 50%; /* 셀의 수직 중앙 */
-    left: 50%; /* 셀의 수평 중앙 */
+    width: 150px;
+    top: 100%; /* 부모 요소 아래로 */
+    right: 0; /* 오른쪽 정렬 */
     transform: translate(-50%, -50%); /* 정확히 중앙 정렬 */
     border-radius: 8px;
     border: 1px solid var(--Gray-100, #F2F4F7);
     background: var(--White-100, #F9FAFB);
     /* Shadow/lg */
     box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
-    list-style: none;
-    align-self: stretch;
     z-index: 1000;
 }
 
@@ -1785,7 +1842,8 @@ line-height: 28px; /* 155.556% */
 }
 .user-info {
     display: flex; /* 수평 정렬 */
-    align-items: center; /* 수직 중앙 정렬 */
+    align-items: center;
+    position: relative; /* 부모 요소를 기준으로 드롭다운 메뉴 위치 지정 */
     gap: 8px; /* 이미지와 텍스트 사이 간격 */
 }
 
