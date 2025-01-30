@@ -39,82 +39,70 @@
                 <div class="table-head"><span class="title-head">환자 목록</span> <button class="button-table" onclick="openRegisterModal()">환자 등록</button></div>
                 <div class="table-container"><div class="table">
                     <table>
-                        <colgroup>
-                            <col>
-                            <col>
-                            <col>
-                            <col>
-                            <col>
-                            <col>
-                            <col>
-                        </colgroup>
+                        
                         <thead>
                             <tr>
-                                <th class="th">검사 시행일</th>
                                 <th class="th">환자 번호</th>
                                 <th class="th">환자 이름</th>
                                 <th class="th">성별</th>
                                 <th class="th">나이</th>
+                                <th class="th">검사 시행일</th>
                                 <th class="th">상태</th>
                                 <th class="th"></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr onclick="showDetails('123456')" class="status-critical">
-                                <td class="td">검사 전</td>
-                                <td class="td">842292</td>
-                                <td class="td">이*화</td>
-                                <td class="td">여</td>
-                                <td class="td">2Y(24M)</td>
-                                <td>
-                                <div class="dropdown-container">
-                                    <span class="status-label">검사 준비</span>
-                                    <button onclick="toggleDropdown(event)" class="dropdown-button"><img src="img/chevron-down.svg"></button>
-                                    <ul class="dropdown-menu">
-                                        <li class="selected" onclick="changeStatus(this, '검사 준비')">검사 준비</li>
-                                        <li onclick="changeStatus(this, '등록됨')">등록됨</li>
-                                    </ul>
-                                </div>
+                                <td data-label="환자 번호" class="td">842292</td>
+                                <td data-label="환자 이름" class="td">이*화</td>
+                                <td data-label="성별" class="td">여</td>
+                                <td data-label="나이" class="td">2Y(24M)</td>
+                                <td data-label="검사 시행일" class="td">검사 전</td>
+                                <td data-label="상태">
+                                    <div class="dropdown-container">
+                                        <span class="status-label">검사 준비</span>
+                                        <button onclick="toggleDropdown(event)" class="dropdown-button"><img src="img/chevron-down.svg"></button>
+                                        <ul class="dropdown-menu">
+                                            <li class="selected" onclick="changeStatus(this, '검사 준비')">검사 준비</li>
+                                            <li onclick="changeStatus(this, '등록됨')">등록됨</li>
+                                        </ul>
+                                    </div>
                                 </td>
-                                <td class="td"><button class="delete-button" onclick="openModal('홍길동', event)"><img src="img/trash.svg" class="button-delete"></button></td>
-                            </tr>
+                                <td data-label="관리" class="td"><button class="delete-button" onclick="openModal('홍길동', event)"><img src="img/trash.svg" class="button-delete"></button></td>
                             </tr>
                             <tr>
-                                <td class="td">검사 전</td>
                                 <td class="td">621441</td>
                                 <td class="td">임*정</td>
                                 <td class="td">여</td>
                                 <td class="td">3Y(40M)</td>
+                                <td class="td">검사 전</td>
                                 <td class="td">등록됨</td>
                                 <td class="td"><button class="delete-button" onclick="openModal('임*정', event)"><img src="img/trash.svg" class="button-delete"></button></td>
                             </tr>
-                            </tr>
                             <tr>
-                                <td class="td">2024.11.22.</td>
                                 <td class="td">33689111</td>
                                 <td class="td">심*민</td>
                                 <td class="td">남</td>
                                 <td class="td">5Y</td>
+                                <td class="td">2024.11.22.</td>
                                 <td class="td">등록됨</td>
                                 <td class="td"><button class="delete-button" onclick="openModal('심*민', event)"><img src="img/trash.svg" class="button-delete"></button></td>
                             </tr>
-                            </tr>
                             <tr>
-                                <td class="td">2024.1.19</td>
                                 <td class="td">872078</td>
                                 <td class="td">현*빈</td>
                                 <td class="td">남</td>
                                 <td class="td">6Y</td>
+                                <td class="td">2024.1.19</td>
                                 <td class="td">검사 완료</td>
                                 <td class="td"><button class="delete-button" onclick="openModal('현*빈', event)"><img src="img/trash.svg" class="button-delete"></button></td>
                             </tr>
-                            </tr>
                             <tr>
-                                <td class="td">2024.1.11</td>
                                 <td class="td">373487373487</td>
                                 <td class="td">이*민</td>
                                 <td class="td">여</td>
                                 <td class="td">10Y</td>
+                                <td class="td">2024.1.11</td>
                                 <td class="td">검사 완료</td>
                                 <td class="td"><button class="delete-button" onclick="openModal('이*민', event)"><img src="img/trash.svg" class="button-delete"></button></td>
                             </tr>
