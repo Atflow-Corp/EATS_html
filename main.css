@@ -1895,8 +1895,8 @@ input[type="checkbox"]:focus {
 .delete-button {
     padding: 0; /* 내부 여백 제거 */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content:right;
+    align-self: flex-end; /* 아이콘을 우측 정렬 */
     gap: 8px;
     border: none; /* 테두리 제거 */
     background: none; /* 배경 제거 */
@@ -2211,7 +2211,11 @@ line-height: 28px; /* 155.556% */
 
 @media (max-width: 768px) {
 
-
+    .main-detail {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
     .new-left-block {
         width: 100%; /* 각 블록이 전체 너비를 차지 */
        
@@ -2727,4 +2731,158 @@ table {
         padding: 32px; /* PC에서 패딩 조정 */
     }
 }
+
+/* PAT05 전용 모바일 최적화 스타일 */
+
+/* 모바일 반응형 */
+@media screen and (max-width: 768px) {
+    .new-container {
+        display: flex;
+        flex-direction: column; /* 세로 방향으로 정렬 */
+        padding: 8px; /* 모바일에서 패딩 조정 */
+    }
+
+    .detail-left,
+    .detail-right {
+        width: 100%; /* 너비를 100%로 설정 */
+        margin: 0; /* 마진 제거 */
+        flex: none; /* 플렉스 속성 제거 */
+        padding: 8px;
+    }
+
+    .patient-name {
+        font-size: 20px; /* 이름 폰트 크기 조정 */
+        white-space: nowrap; /* 줄바꿈 방지 */
+    }
+
+    .footer-box {
+        background-color: var(--Gray-100, #F2F4F7); /* 회색 배경색 */
+        padding: 16px; /* 푸터 패딩 조정 */
+        width: 100%; /* 푸터 너비 100% */
+        position: relative; /* 상대 위치 설정 */
+        margin-top: auto; /* 아래에 붙이기 */
+    }
+
+    .login-container {
+        width: 100%; /* 로그인 컨테이너 너비 100% */
+        max-width: none; /* 최대 너비 제한 해제 */
+        margin: 0 auto; /* 중앙 정렬 */
+    }
+
+    .styled-input {
+        width: 100%; /* 인풋창 너비 100% */
+        min-width: 240px; /* 최소 너비 설정 */
+    }
+
+    .delete-button {
+        width: 100%; /* 삭제 버튼 너비 100% */
+        padding: 12px; /* 패딩 조정 */
+    }
+
+    .breadcrumb-container {
+        width: 100%; /* breadcrumb 너비 100% */
+        padding: 8px; /* 패딩 추가 */
+    }
+    .breadcrumb-box {
+        height: 40px;
+    }
+
+    .new-detail {
+        display: flex;
+        flex-direction: column; /* 세로 방향으로 정렬 */
+        width: 100%; /* 너비 100% */
+    }
+
+    .detail-left {
+        width: 100%; /* 환자 정보 블록 너비 100% */
+        margin-bottom: 16px; /* 아래 여백 추가 */
+        display: table; /* 테이블처럼 구성 */
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .patient-block {
+        display: table-row; /* 각 환자 정보 블록을 테이블 행처럼 구성 */
+    }
+
+    .patient-block label {
+        display: table-cell; /* 라벨을 테이블 셀처럼 구성 */
+        padding: 8px; /* 패딩 추가 */
+        font-weight: bold; /* 라벨 강조 */
+    }
+
+    .patient-block .styled-input {
+        display: table-cell; /* 인풋을 테이블 셀처럼 구성 */
+        width: 100%; /* 인풋 너비 100% */
+        padding: 8px; /* 패딩 추가 */
+    }
+
+    .detail-right {
+        width: 100%; /* 검사 준비 블록 너비 100% */
+        margin-top: 16px; /* 위쪽 여백 추가 */
+        text-align: center; /* 중앙 정렬 */
+    }
+
+    .pat05-title {
+        font-size: 20px; /* 제목 폰트 크기 조정 */
+        margin-bottom: 8px; /* 아래 여백 추가 */
+    }
+
+    .pat05-button {
+        margin-top: 12px; /* 위쪽 여백 추가 */
+        padding: 10px 20px; /* 버튼 패딩 조정 */
+        width: 100%; /* 버튼 너비 100% */
+    }
+
+    .footer-box {
+        background-color: var(--Gray-100, #F2F4F7); /* 회색 배경색 */
+        padding: 16px; /* 푸터 패딩 조정 */
+        width: 100%; /* 푸터 너비 100% */
+        position: relative; /* 상대 위치 설정 */
+        margin-top: auto; /* 아래에 붙이기 */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .patient-block {
+        display: block; /* 블록으로 설정하여 줄바꿈 */
+        margin-bottom: 8px; /* 아래 여백 추가 (필요 시) */
+    }
+
+    .input-label {
+        display: block; /* 라벨을 블록으로 설정하여 줄바꿈 */
+        margin-bottom: 4px; /* 라벨과 인풋 간의 여백 추가 */
+    }
+
+    .age-label {
+        display: block; /* 나이 라벨을 블록으로 설정하여 줄바꿈 */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .detail-right {
+        width: 100%; /* 너비 100% 설정 */
+        box-sizing: border-box;
+    }
+
+    .pat05-title,
+    .pat05-desc {
+        width: 80%; /* 너비 100% 설정 */
+        word-wrap: break-word; /* 텍스트가 넘칠 경우 줄바꿈 */
+        overflow-wrap: break-word; /* 텍스트가 넘칠 경우 줄바꿈 */
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .detail-right img {
+        width: 80%; /* 이미지 너비를 80%로 설정 (필요에 따라 조정) */
+        max-width: 200px; /* 최대 너비 설정 (필요에 따라 조정) */
+        height: auto; /* 비율 유지 */
+        display: block; /* 블록으로 설정하여 중앙 정렬 가능 */
+        margin: 0 auto; /* 중앙 정렬 */
+    }
+}
+
+
 
