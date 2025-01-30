@@ -263,6 +263,10 @@ input[type="checkbox"]:focus {
         width: auto; /* 버튼이 화면에 맞게 확장 */
         justify-content: center;
     }
+    .button3-my {
+        width: 100%; /* 버튼이 화면에 맞게 확장 */
+        justify-content: center;
+    }
     .desc-my{
         width: auto;
         white-space: normal;
@@ -510,6 +514,26 @@ input[type="checkbox"]:focus {
     font-weight: 800;
     line-height: 24px; /* 150% */
     
+}
+.button3-my{
+    white-space: nowrap;
+    display: flex;
+    padding: 8px 14px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--Brand-50, #EEF4FF);
+    background: var(--Brand-50, #EEF4FF);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: var(--Brand-700, #3538CD);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 20px; /* 142.857% */
+    cursor: pointer; /* 커서 포인터 */
+    width: 100%;
+
 }
 .desc-my{
     width: 100%;
@@ -2209,6 +2233,12 @@ line-height: 28px; /* 155.556% */
     cursor: pointer; /* 커서 포인터 */
 }
 
+.edit-patient{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 10px 0;
+}
 @media (max-width: 768px) {
 
     .main-detail {
@@ -2781,7 +2811,8 @@ table {
 
     .breadcrumb-container {
         width: 100%; /* breadcrumb 너비 100% */
-        padding: 8px; /* 패딩 추가 */
+        padding: 0 20px; /* 패딩 추가 */
+        box-sizing: border-box;
     }
     .breadcrumb-box {
         height: 40px;
