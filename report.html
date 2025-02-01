@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Logo.png" type="image/png">
+    <link rel="stylesheet" href="main.css">
+    <title>검사 결과</title>
+
+</head>
+<body class="pdf-body">
+
+    <!-- 닫기, 인쇄, PDF 저장 버튼 -->
+    <div class="pdf-button-container">
+        <button class="download-button" onclick="window.close()"><img src="img/x.svg">닫기</button>
+        <button class="print-button" onclick="window.print()"><img src="img/printer.svg">인쇄하기</button>
+        <button class="download-button" onclick="downloadPDF()"><img src="img/download.svg">다운로드</button>
+    </div>
+
+    <!-- 페이지 컨테이너 -->
+    <div class="pdf-container">
+        <div class="pdf-page pdf-active" id="pdf-page1">
+            <div class="pdf-header-container">
+                
+                <div class="pdf-header2container">
+                    <div class="pdf-header2sub">자폐스펙트럼장애 진단</div>
+                    <div class="pdf-header2main">결과 보고서</div>
+                </div>
+                <div class="pdf-header1">
+                    <div class="pdf-header-container-left">
+                        <div class="pdf-label">검사기관명</div>
+                        <div class="pdf-label-content">ㅇㅇㅇㅇ병원</div>
+                    </div>
+                    <div class="pdf-header-container-left">
+                        <div class="pdf-label">주소</div>
+                        <div class="pdf-label-content">서울특별시 강남구 xx로 123</div>
+                    </div>
+                    <div class="pdf-header-container-left">
+                        <div class="pdf-label">연락처</div>
+                        <div class="pdf-label-content">02-123-3455</div>
+                    </div>
+                    <div class="pdf-header-container-left">
+                        <div class="pdf-label">담당의사</div>
+                        <div class="pdf-label-content">김의사</div>
+                    </div>
+                </div>
+            </div>  
+            <div class="pdf-content">
+              <div class="pdf-title">1.환자 정보</div>
+              <div class="report-table-container">
+                <table class="report-table">
+                    <tr>
+                        <th>이름</th>
+                        <td>홍길동</td>
+                        <th>ID</th>
+                        <td>1234-56</td>
+                        <th>성별</th>
+                        <td>남</td>
+                        <th>나이(개월)</th>
+                        <td>만 1세 (15개월)</td>
+                    </tr>
+                    <tr>
+                        <th>평가일</th>
+                        <td colspan="3">2025년 1월 29일</td>
+                        <th>평가도구</th>
+                        <td colspan="3">EATS v1.0</td>
+                    </tr>
+                </table></div>
+                <div class="pdf-title">2.진단 결과 요약</div>
+            </div>
+            </div>
+        </div>
+
+        <div class="pdf-page" id="pdf-page2">
+            <div class="pdf-header">검사 결과 보고서 - 2 페이지</div>
+            <div class="pdf-content">
+                <p>이곳은 두 번째 페이지의 내용입니다.</p>
+            </div>
+        </div>
+
+        <div class="pdf-page" id="pdf-page3">
+            <div class="pdf-header">검사 결과 보고서 - 3 페이지</div>
+            <div class="pdf-content">
+                <p>이곳은 세 번째 페이지의 내용입니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 페이지 네비게이션 -->
+    <div class="pdf-pagination">
+        <button class="pdf-button" onclick="prevPage()">이전</button>
+        <div class="pdf-page-indicator">
+            <span class="pdf-dot pdf-dot-active"></span>
+            <span class="pdf-dot"></span>
+            <span class="pdf-dot"></span>
+        </div>
+        <button class="pdf-button" onclick="nextPage()">다음</button>
+    </div>
+
+    <!-- PDF 변환 스크립트 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        let currentPage = 1;
+        const totalPages = 3;
+
+        function updatePage() {
+            document.querySelectorAll('.pdf-page').forEach(page => page.classList.remove('pdf-active'));
+            document.getElementById(`pdf-page${currentPage}`).classList.add('pdf-active');
+
+            document.querySelectorAll('.pdf-dot').forEach(dot => dot.classList.remove('pdf-dot-active'));
+            document.querySelectorAll('.pdf-dot')[currentPage - 1].classList.add('pdf-dot-active');
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                updatePage();
+            }
+        }
+
+        function nextPage() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                updatePage();
+            }
+        }
+
+        function downloadPDF() {
+            const element = document.querySelector(".pdf-container");
+            html2pdf().from(element).save("검사_결과.pdf");
+        }
+    </script>
+
+</body>
+</html>

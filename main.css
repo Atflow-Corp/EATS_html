@@ -2916,4 +2916,293 @@ table {
 }
 
 
+  /* 기본 설정 */
+  .pdf-body {
+    margin: 0;
+    padding: 30px;
+    background: var(--Gray-100, #F2F4F7);
+    text-align: center;
+}
 
+/* 버튼 컨테이너 */
+.pdf-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 버튼 스타일 */
+.pdf-button {
+    border: 1px solid var(--Brand-600, #444CE7);
+    background: var(--Brand-600, #444CE7);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    min-height: 48px; /* 모바일 터치 최적화 */
+    border-radius: 8px;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+.pdf-button:hover {
+    background-color: #0056b3;
+}
+
+/* PDF 스타일 컨테이너 */
+.pdf-container {
+    max-width: 794px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 794 / 1123; /* A4 비율 유지 */
+    background-color: white;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 헤더 스타일 */
+.pdf-header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto 10px;
+    background-color: white;
+    line-height: 20px;
+    overflow: visible;
+    
+}
+.pdf-header-container-left{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 4px;
+    
+}
+.pdf-header1 {
+    text-align: left;
+    font-size: 18px;
+    color: var(--Gray-900, #101828); /* Changed from font-color to color */
+    margin-bottom: 20px;
+    width: 40%;
+    padding: 10px;
+    border: 1px solid var(--Gray-200, #EAECF0);
+    background: var(--Gray-50, #F9FAFB);
+}
+.pdf-header2container{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: flex-start; /* Changed from top to flex-start */
+    justify-content: center;
+    line-height: 1.2; /* Reduced line height */
+    margin-bottom: 20px;
+    padding: 25px;
+
+}
+.pdf-header2sub{
+    text-align: center;
+    font-size: 20px;
+    color: var(--Gray-900, #98A2B3); /* Changed from font-color to color */
+    
+}
+.pdf-header2main{
+    text-align: center;
+    font-size: 40px;
+    color: var(--Gray-900, #101828); /* Changed from font-color to color */
+    font-weight: 800;
+}
+.pdf-header3{
+    width: 30%;
+    text-align: right;
+    font-size: 16px;
+    color: var(--Gray-900, #101828); /* Changed from font-color to color */
+    margin-bottom: 20px;
+}
+.pdf-label{
+    color: var(--Gray-600, #475467);
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+.pdf-label-content{
+    color: var(--Gray-600, #475467);
+font-family: Pretendard;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+/* 본문 스타일 */
+.pdf-content {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* 페이지 스타일 */
+.pdf-page {
+    display: none;
+}
+
+.pdf-dot-active {
+    display: block;
+    animation: pdf-fade-in 0.3s ease-in-out;
+}
+
+/* 페이지 네비게이션 */
+.pdf-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.pdf-page-indicator {
+    display: flex;
+    gap: 5px;
+}
+
+.pdf-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #E0EAFF;
+}
+
+.pdf-dot-active{
+    background-color: #3538CD;
+}
+
+.pdf-active {
+    display: block; /* Changed from pdf-dot-active to pdf-active */
+    animation: pdf-fade-in 0.3s ease-in-out;
+}
+
+.pdf-title{
+    font-size: 20px;
+    color: var(--Gray-900, #475467); /* Changed from font-color to color */
+    font-weight: 600;
+    padding: 0px 20px;
+    margin-top: 20px;
+}
+.report-table-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.report-table {
+    width: 95%;
+    max-width: 800px;
+    border-collapse: collapse;
+    border: 2px solid #D0D5DD;
+}
+
+.report-table th, .report-table td {
+    border: 1px solid #EAECF0;
+    padding: 8px 12px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.report-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.report-table td[colspan="5"] {
+    text-align: left;
+}
+
+
+/* 애니메이션 */
+@keyframes pdf-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 인쇄 모드 스타일 */
+@media print {
+    .pdf-body {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+    }
+    .pdf-button-container, .pdf-pagination {
+        display: none; /* 버튼과 네비게이션 숨김 */
+    }
+    .pdf-page {
+        display: block;
+        page-break-after: always; /* 인쇄 시 페이지 구분 */
+    }
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .pdf-container {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        font-size: 14px;
+    }
+    .pdf-header {
+        font-size: 20px;
+    }
+    .pdf-content {
+        font-size: 14px;
+    }
+    .pdf-button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+/* 인쇄 시 테두리 잘리는 문제 해결 */
+@media print {
+    .pdf-container, .pdf-header-container, .pdf-header1 {
+        max-width: none !important;
+        overflow: visible !important;
+        border-collapse: collapse !important;
+    }
+
+    /* 인쇄 시 배경색 유지 */
+    .pdf-container {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+}
+/* 모바일 반응형 - 결과 리포트 테이블 */
+@media (max-width: 768px) {
+    .report-table-container {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+
+    .report-table {
+        width: 100%;
+        min-width: 600px;
+    }
+}
