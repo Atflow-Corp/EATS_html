@@ -1112,6 +1112,7 @@ input[type="checkbox"]:focus {
     align-items: center; /* 중앙 정렬 */
     color: var(--Gray-700, #344054); /* 텍스트 색상 */
     height: 100%;
+    box-sizing: border-box; /* 패딩 포함 너비 계산 */
 }
 
 .login-container {
@@ -2285,8 +2286,10 @@ line-height: 28px; /* 155.556% */
         padding: 16px; /* 내부 여백 설정 */
         text-align: center; /* 텍스트 중앙 정렬 */
         background-color: var(--Gray-100, #F2F4F7); /* 배경색 유지 */
-    border-bottom-left-radius: 12px; /* 좌측하단 둥글게 */
-    border-bottom-right-radius: 12px; /* 우측하단 둥글게 */
+        border-bottom-left-radius: 12px; /* 좌측하단 둥글게 */
+        border-bottom-right-radius: 12px; /* 우측하단 둥글게 */
+        box-sizing: border-box; /* 패딩 포함 너비 계산 */
+        width: 100%;
     }
 
     .footer-content {
