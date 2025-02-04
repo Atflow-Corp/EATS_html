@@ -3123,6 +3123,13 @@ line-height: normal;
     font-weight: 400;
     line-height: normal;
 }
+.report-descmini{
+    font-size: 11px;
+    color: var(--Gray-600, #475467);
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 35px;
+}
 .report-table {
     width: 95%;
     max-width: 800px;
