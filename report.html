@@ -14,7 +14,7 @@
     <div class="pdf-button-container">
         <button class="download-button" onclick="window.close()"><img src="img/x.svg">닫기</button>
         <button class="print-button" onclick="window.print()"><img src="img/printer.svg">인쇄하기</button>
-        <button class="download-button" onclick="downloadPDF()"><img src="img/download.svg">다운로드</button>
+       
     </div>
 
     <!-- 페이지 컨테이너 -->
@@ -46,7 +46,7 @@
                 </div>
             </div>  
             <div class="pdf-content">
-              <div class="pdf-title">1.환자 정보</div>
+              <div class="pdf-title">1. 환자 정보</div>
               <div class="report-table-container">
                 <table class="report-table">
                     <tr>
@@ -66,25 +66,294 @@
                         <td colspan="3">EATS v1.0</td>
                     </tr>
                 </table></div>
-                <div class="pdf-title">2.진단 결과 요약</div>
+                <div class="pdf-title">2. 진단 결과 요약</div>
+                <div class="graph-area">그래프 영역</div>
+                <div class="report-desc">*AVC(AOI Vacancy count percentage) 수치가 높게 나올수록 ASD일 가능성이 높다는 의미</div>
+                <div class="pdf-title">3. 진단 내역</div>
+                <div class="report-table-container">
+                    <table class="report-table">
+                        <tr>
+                            <th></th>
+                            <th>Video 1</th>
+                            <th>Video 2</th>
+                        </tr>
+                        <tr>
+                            <th>AOI<br>(관심영역)</th>
+                            <td><img src="img/eye.png"> <img src="img/lips.png"></td>
+                            <td><img src="img/attention.png"></td>
+                        </tr>
+                        <tr>
+                            <th>성능*</th>
+                            <td>민감도 80%, 특이도 100%</td>
+                            <td>민감도 80%, 특이도 92%</td>
+                        </tr>
+                        <tr>
+                            <th>측정 내용</th>
+                            <td>- 마음이론 (Theory of Mind)<br>- 사회성<br>- 초기 언어발달</td>
+                            <td>- 공동주의 (Joint Attention)<br>- 사회적 의사소통 능력</td>
+                        </tr>
+                    </table></div>
+                    <div class="report-desc" style="text-align: left; page-break-inside: avoid; box-shadow: none;">*PCT/US 2023 / 08 2298</div>
             </div>
             </div>
-        </div>
+       
 
         <div class="pdf-page" id="pdf-page2">
-            <div class="pdf-header">검사 결과 보고서 - 2 페이지</div>
-            <div class="pdf-content">
-                <p>이곳은 두 번째 페이지의 내용입니다.</p>
+            <div class="pdf-header-container">
+                <div class="pdf-header2container">
+                    <div class="pdf-header2sub">V1 상세 결과</div>
+                    <div class="pdf-header2main">Face Speaking</div>
+                </div>
+                <div class="pdf-header1">
+                    <div class="pdf-header-container-left">
+                        <div class="pdf-label">검사기관명</div>
+                        <div class="pdf-label-content">ㅇㅇㅇㅇ병원</div>
+                    </div>
+                    <div class="pdf-header-container-left">
+                        <div class="pdf-label">주소</div>
+                        <div class="pdf-label-content">서울특별시 강남구 xx로 123</div>
+                    </div>
+                    <div class="pdf-header-container-left">
+                        <div class="pdf-label">연락처</div>
+                        <div class="pdf-label-content">02-123-3455</div>
+                    </div>
+                    <div class="pdf-header-container-left">
+                        <div class="pdf-label">담당의사</div>
+                        <div class="pdf-label-content">김의사</div>
+                    </div>
+                </div>
             </div>
-        </div>
+            <div class="pdf-content">
+                <div class="pdf-title">1. AOI* 세부지표</div>
+              <div class="report-table-container">
+                <table class="report-table">
+                    <tr>
+                        <th colspan="2">V1</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Fixation</th>
+                        <th>Total count</th>
+                        <td>623</td>
+                        <td>623</td>
+                        <td>623</td>
+                    </tr>
+                    <tr>
+                        <th>%</th>
+                        <td>89.8%</td>
+                        <td>89.8%</td>
+                        <td>89.8%</td>
+                    </tr>
+                    <tr></tr>
+                        <th rowspan="2">Saccade</th>
+                        <th>Total count</th>
+                        <td>71</td>
+                        <td>71</td>
+                        <td>71</td>
+                    </tr>
+                    <tr>
+                        <th>%</th>
+                        <td>4.7%</td>
+                        <td>4.7%</td>
+                        <td>4.7%</td>
+                    </tr>
+                    <tr></tr>
+                        <th rowspan="5">Switching</th>
+                        <th>In to In</th>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>3</td>
+                    </tr>
+                    <tr></tr>
+                        <th>In to Out</th>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th>Out to Out</th>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <th>Out to In</th>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Vacancy</th>
+                        <th>AVC%</th>
+                        <td>4.7%</td>
+                        <td>4.7%</td>
+                        <td>4.7%</td>
+                    </tr>
+                    <tr>
+                        <th>Risk Level</th>
+                        <td>Low</td>
+                        <td>Low</td>
+                        <td>Low</td>
+                    </tr>
+                </table></div>
+                <div class="report-desc">*AOI (Area of Interest, 관심자극)</div>
+            <div class="pdf-title">2. V1 자극 분석</div>
+            <div class="minimal-table-container">
+                <table class="minimal-table">
+                    <tr>
+                        <th>V 1-1</th>
+                        <th>V 1-2</th>
+                        <th>V 1-3</th>
+                    </tr>
+                    <tr>
+                        <td><img src="img/v1-1.png"></td>
+                        <td><img src="img/v1-2.png"></td>
+                        <td><img src="img/v1-3.png"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="pdf-title">3. V1 Phenotype 결과</div>
+            <div class="report-box">
+                <div class="report-box-1">평균 AOI 반응성이 89.8%, SACCADE 4.7%, AVC 4.7%로</div>
+                <div class="report-box-2">전반적인 ASD Risk Level은 낮은 것으로 보임.</div>
+            </div>
+        </div></div>
 
         <div class="pdf-page" id="pdf-page3">
-            <div class="pdf-header">검사 결과 보고서 - 3 페이지</div>
+            <div class="pdf-header-container">
+                <div class="pdf-header2container">
+                    <div class="pdf-header2sub">V2 상세 결과</div>
+                    <div class="pdf-header2main">Tablet</div>
+                </div>
+                <div class="pdf-header1">
+                    <div class="pdf-header-container-left">
+                        <div class="pdf-label">검사기관명</div>
+                        <div class="pdf-label-content">ㅇㅇㅇㅇ병원</div>
+                    </div>
+                    <div class="pdf-header-container-left">
+                        <div class="pdf-label">주소</div>
+                        <div class="pdf-label-content">서울특별시 강남구 xx로 123</div>
+                    </div>
+                    <div class="pdf-header-container-left">
+                        <div class="pdf-label">연락처</div>
+                        <div class="pdf-label-content">02-123-3455</div>
+                    </div>
+                    <div class="pdf-header-container-left">
+                        <div class="pdf-label">담당의사</div>
+                        <div class="pdf-label-content">김의사</div>
+                    </div>
+                </div>
+            </div>
             <div class="pdf-content">
-                <p>이곳은 세 번째 페이지의 내용입니다.</p>
+                <div class="pdf-title">1. AOI* 세부지표</div>
+              <div class="report-table-container">
+                <table class="report-table">
+                    <tr>
+                        <th colspan="2">V2</th>
+                        <th colspan="2">1</th>
+                        <th colspan="2">2</th>
+                        
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Fixation</th>
+                        <th>Total count</th>
+                        <td>623</td>
+                        <td>623</td>
+                        <td>623</td>
+                        <td>623</td>
+                    </tr>
+                    <tr>
+                        <th>%</th>
+                        <td>89.8%</td>
+                        <td>89.8%</td>
+                        <td>89.8%</td>
+                        <td>89.8%</td>
+                    </tr>
+                    <tr></tr>
+                        <th rowspan="2">Saccade</th>
+                        <th>Total count</th>
+                        <td>71</td>
+                        <td>71</td>
+                        <td>71</td>
+                        <td>71</td>
+                    </tr>
+                    <tr>
+                        <th>%</th>
+                        <td>4.7%</td>
+                        <td>4.7%</td>
+                        <td>4.7%</td>
+                        <td>4.7%</td>
+                    </tr>
+                    <tr></tr>
+                        <th rowspan="5">Switching</th>
+                        <th>In to In</th>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>3</td>
+                    </tr>
+                    <tr></tr>
+                        <th>In to Out</th>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th>Out to Out</th>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <th>Out to In</th>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Vacancy</th>
+                        <th>AVC%</th>
+                        <td>4.7%</td>
+                        <td>4.7%</td>
+                        <td>4.7%</td>
+                        <td>4.7%</td>
+                    </tr>
+                    <tr>
+                        <th>Risk Level</th>
+                        <td>Low</td>
+                        <td>Low</td>
+                        <td>Low</td>
+                        <td>Low</td>
+                    </tr>
+                </table></div>
+                <div class="report-desc">*AOI (Area of Interest, 관심자극)</div>
+            <div class="pdf-title">2. V2 자극 분석</div>
+            <div class="minimal-table-container">
+                <table class="minimal-table2">
+                    <tr>
+                        <th>V 2-1</th>
+                        <th>V 2-2</th>
+                        
+                    </tr>
+                    <tr>
+                        <td><img src="img/v2-1.png"></td>
+                        <td><img src="img/v2-2.png"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="pdf-title">3. V2 Phenotype 결과</div>
+            <div class="report-box">
+                <div class="report-box-1">평균 AOI 반응성이 89.8%, SACCADE 4.7%, AVC 4.7%로</div>
+                <div class="report-box-2">전반적인 ASD Risk Level은 낮은 것으로 보임.</div>
             </div>
         </div>
     </div>
+</div>
 
     <!-- 페이지 네비게이션 -->
     <div class="pdf-pagination">
