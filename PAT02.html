@@ -46,7 +46,8 @@
                                 <th class="th">환자 이름</th>
                                 <th class="th">성별</th>
                                 <th class="th">나이</th>
-                                <th class="th">검사 시행일</th>
+                                <th class="th">누적 검사 횟수</th>
+                                <th class="th">마지막 검사일</th>
                                 <th class="th">상태</th>
                                 <th class="th"></th>
                             </tr>
@@ -57,17 +58,9 @@
                                 <td data-label="환자 이름" class="td">이*화</td>
                                 <td data-label="성별" class="td">여</td>
                                 <td data-label="나이" class="td">2Y(24M)</td>
-                                <td data-label="검사 시행일" class="td">검사 전</td>
-                                <td data-label="상태">
-                                    <div class="dropdown-container">
-                                        <span class="status-label">검사 준비</span>
-                                        <button onclick="toggleDropdown(event)" class="dropdown-button"><img src="img/chevron-down.svg"></button>
-                                        <ul class="dropdown-menu">
-                                            <li class="selected" onclick="changeStatus(this, '검사 준비')">검사 준비</li>
-                                            <li onclick="changeStatus(this, '등록됨')">등록됨</li>
-                                        </ul>
-                                    </div>
-                                </td>
+                                <td data-label="누적 검사 횟수" class="td">0회</td>
+                                <td data-label="마지막 검사일" class="td">-</td>
+                                <td class="td">검사 대기중</td>
                                 <td data-label="관리" class="td"><button class="delete-button" onclick="openModal('홍길동', event)"><img src="img/trash.svg" class="button-delete"></button></td>
                             </tr>
                             <tr>
@@ -75,8 +68,9 @@
                                 <td class="td">임*정</td>
                                 <td class="td">여</td>
                                 <td class="td">3Y(40M)</td>
-                                <td class="td">검사 전</td>
-                                <td class="td">등록됨</td>
+                                <td class="td">1회</td>
+                                <td class="td">2024.12.31</td>
+                                <td class="td">검사 대기중</td>
                                 <td class="td"><button class="delete-button" onclick="openModal('임*정', event)"><img src="img/trash.svg" class="button-delete"></button></td>
                             </tr>
                             <tr>
@@ -84,8 +78,9 @@
                                 <td class="td">심*민</td>
                                 <td class="td">남</td>
                                 <td class="td">5Y</td>
-                                <td class="td">2024.11.22.</td>
-                                <td class="td">등록됨</td>
+                                <td class="td">0회</td>
+                                <td class="td">검사 전</td>
+                                <td class="td">검사 전</td>
                                 <td class="td"><button class="delete-button" onclick="openModal('심*민', event)"><img src="img/trash.svg" class="button-delete"></button></td>
                             </tr>
                             <tr>
@@ -93,8 +88,9 @@
                                 <td class="td">현*빈</td>
                                 <td class="td">남</td>
                                 <td class="td">6Y</td>
+                                <td class="td">1회</td>
                                 <td class="td">2024.1.19</td>
-                                <td class="td">검사 완료</td>
+                                <td class="td">분석 완료</td>
                                 <td class="td"><button class="delete-button" onclick="openModal('현*빈', event)"><img src="img/trash.svg" class="button-delete"></button></td>
                             </tr>
                             <tr>
@@ -102,8 +98,9 @@
                                 <td class="td">이*민</td>
                                 <td class="td">여</td>
                                 <td class="td">10Y</td>
+                                <td class="td">3회</td>
                                 <td class="td">2024.1.11</td>
-                                <td class="td">검사 완료</td>
+                                <td class="td" style="color: var(--Red-500, #F04438);">분석 실패</td>
                                 <td class="td"><button class="delete-button" onclick="openModal('이*민', event)"><img src="img/trash.svg" class="button-delete"></button></td>
                             </tr>
                         </tbody>
