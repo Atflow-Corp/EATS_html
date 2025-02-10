@@ -747,17 +747,25 @@ a:hover {
     flex-direction: column;
     align-items: center;
     gap: 24px;
+    width: 100%;
+    max-width: 360px;
     box-sizing: border-box;
 }
 .account-list-button{
     display: flex;
     width: 100%;
+    height: 60px;
+    box-sizing: border-box;
     padding: 13px 25px;
     justify-content: space-between;
     align-items: center;
     border-radius: 12px;
     background: var(--BG2, #343338);
     cursor: pointer;
+    max-width: 360px;
+}
+.account-list-button:hover{
+    background: var(--Brand-500, #545356);
 }
 .account-left{
     display: flex;
@@ -774,7 +782,7 @@ a:hover {
     line-height: 30px; /* 150% */
 }
 .account-left-email{
-    color: var(--White-60, #98A2B3);
+    color: var(--White-60, #FFFFFF);
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
