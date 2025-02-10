@@ -925,7 +925,7 @@ input[type="checkbox"]:focus {
     background: var(--White-100, #F9FAFB); /* 배경색 */
     max-width: 1200px; /* 최대 너비 설정 */
     flex: 1 0 0;
-    gap: 16px; /* 블록 사이 간격 */
+   
 }
 
 .parent-container {
@@ -1500,6 +1500,7 @@ input[type="checkbox"]:focus {
 .table {
     border-collapse: collapse; /* 테두리 중복 제거 */
     width: 100%;
+    table-layout: auto; 
 }
 
 .table-container {
@@ -1537,7 +1538,8 @@ input[type="checkbox"]:focus {
     font-weight: 400;
     line-height: 20px; /* 줄 높이 */
     box-sizing: border-box; /* 패딩 포함 크기 계산 */
-    border-right: none
+    border-right: none;
+    vertical-align: middle; /* 수직 가운데 정렬 */
 }
 
 /* 기본 행 스타일 */
@@ -1545,6 +1547,7 @@ input[type="checkbox"]:focus {
     cursor: pointer; /* 클릭 가능 */
     transition: background-color 0.3s ease;
     border-bottom: 1px solid transparent; /* 기본 경계선 투명 처리 */
+    height: 80px;
 }
 
 /* 행에 포커스되거나 호버될 때 배경색 변경 */
@@ -2200,8 +2203,9 @@ line-height: 28px; /* 155.556% */
 .download-button{
     align-items: flex-start;
     display: flex;
-    padding: 10px 18px;
+    padding: 8px 12px;
     justify-content: center;
+    white-space: nowrap;
     align-items: center;
     gap: 8px;
     border-radius: 8px;
@@ -2210,11 +2214,21 @@ line-height: 28px; /* 155.556% */
     /* Shadow/xs */
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
     color: var(--Gray-700, #344054);
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 800;
     line-height: 24px; /* 150% */
     cursor: pointer; /* 커서 포인터 */
+}
+/* download-button이 포함된 td에 대한 추가 스타일 */
+.download-button-container {
+    display: flex; /* 플렉스 박스 사용 */
+    justify-content: flex-start; /* 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    padding: 10px; /* 추가 패딩 */
+    border: 1px solid var(--Gray-200, #EAECF0); /* 테두리 추가 */
+    margin: 8px 0; /* 위아래 여백 추가 */
+    gap: 8px;
 }
 .print-button{
     align-items: flex-start;
@@ -2328,6 +2342,7 @@ line-height: 28px; /* 155.556% */
 /* 테이블 관련 스타일 */
 .table-container {
     width: 100%;
+    display: block; /* 테이블을 블록으로 설정하여 스크롤 가능하게 */
     overflow-x: auto;
 }
 
@@ -2352,7 +2367,11 @@ table {
 /* 모바일 대응 스타일 */
 @media screen and (max-width: 768px) {
     /* 기존 모바일 스타일 유지 */
-    
+    .download-button {
+        padding: 10px 16px; /* 패딩 조정 */
+        font-size: 16px; /* 폰트 크기 조정 */
+        justify-content: flex-start; /* 중앙 정렬 */
+    }
     /* 테이블 셀 모두 볼드 처리 */
     .table td {
         display: flex;
@@ -2470,10 +2489,12 @@ table {
         padding: 12px;
         background: var(--White-100, #F9FAFB);
     }
-
+    .table tbody tr {
+        height: auto; /* 모바일에서는 높이를 자동으로 조정 */
+    }
     /* TD 기본 스타일 */
     .table td {
-        display: flex;
+        display: block;
         width: 100%;
         padding: 8px 12px;
         border-bottom: 1px solid #eee;
@@ -2912,11 +2933,10 @@ table {
 
 @media screen and (max-width: 768px) {
     .detail-right img {
-        width: 80%; /* 이미지 너비를 80%로 설정 (필요에 따라 조정) */
-        max-width: 200px; /* 최대 너비 설정 (필요에 따라 조정) */
+        max-width: 20px; /* 최대 너비 설정 (필요에 따라 조정) */
         height: auto; /* 비율 유지 */
-        display: block; /* 블록으로 설정하여 중앙 정렬 가능 */
         margin: 0 auto; /* 중앙 정렬 */
+        vertical-align: middle;
     }
 }
 
@@ -3314,4 +3334,43 @@ line-height: normal;
     font-size: 16px;
     font-weight: 800;
     line-height: normal;
+}
+.button-status{
+    border-radius: 8px;
+    display: flex;
+    padding: 10px 18px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--Gray-300, #D0D5DD);
+    background: var(--White-100, #F9FAFB);
+    color: var(--Gray-700, #344054);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24px; /* 150% */
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+}
+.button-status img{
+    width: 20px;
+    height: 20px;
+}
+.loading{
+    color: var(--Gray-700, #344054);
+/* Text md/Bold */
+font-family: Pretendard;
+font-size: 16px;
+font-style: normal;
+font-weight: 800;
+line-height: 24px; /* 150% */
+margin-left: 8px;
+}
+.error{
+    color: var(--Red-500, #F04438);
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px; /* 150% */
 }
