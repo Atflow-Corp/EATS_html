@@ -154,6 +154,9 @@ a:hover {
     line-height: 28px; /* 155.556% */
     cursor: pointer;
 }
+.button-basic360:hover{
+    background: var(--Brand-500, #3538CD);
+}
 .disclaimer{
     color: var(--White-60, #98A2B3);
     font-size: 14px;
