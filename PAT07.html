@@ -32,8 +32,7 @@
             </a>
         </div>
         <div class="result-buttongroup">
-            <button class="download-button"><img src="img/download.svg">다운로드</button>
-            <button class="print-button"><img src="img/printer.svg">인쇄하기</button>
+           
         </div>
 
 
@@ -70,21 +69,59 @@
             </div>
             </div>
             <div class="detail-right">
-                <iframe id="pdf-viewer" src="" width="100%" height="800px" style="border: none;"></iframe>
+                <div class="tablehead-container">
+                    <div class="table-head"><span class="title-head">검사 시행 목록</span> <button class="button-table"><img src="img/add.svg"> 검사 대기에 추가</button></div>
+                    <div class="table-container"><div class="table">
+                        <table>
+                            
+                            <thead>
+                                <tr>
+                                    <th class="th">검사 대기 등록일</th>
+                                    <th class="th">검사 시행일</th>
+                                    <th class="th">진행 결과</th>
+                                    <th class="th">상태</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="td">2024.01.31.</td>
+                                    <td class="td">-</td>
+                                    <td class="td">검사 대기 중</td>
+                                    <td class="td download-button-container"><button class="download-button"><img src="img/delete.svg">검사 대기 목록에서 삭제</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="td">2025.01.21.</td>
+                                    <td class="td">2025.01.22.</td>
+                                    <td class="td">검사 진행 중</td>
+                                    <td class="td download-button-container"><img src="img/loader_gray.svg" class="loader_gray"><span class="loading">검사 진행 중입니다.</span> </td>
+                                </tr>
+                                <tr>
+                                    <td class="td">2025.01.19.</td>
+                                    <td class="td">2025.01.19</td>
+                                    <td class="td">검사 완료</td>
+                                    <td class="td download-button-container"><img src="img/loader_gray.svg" class="loader_gray"><span class="loading">리포트 생성 중입니다.</span> </td>
+                                <tr>
+                                    <td class="td">2024.10.24.</td>
+                                    <td class="td">2024.10.23.</td>
+                                    <td class="td">분석 완료</td>
+                                    <td class="td download-button-container"><button class="download-button"><img src="img/report_view.svg">리포트 조회</button></td>
+                                   
+                                </tr>
+                                <tr>
+                                    <td class="td">2024.09.30.</td>
+                                    <td class="td">2024.10.01.</td>
+                                    <td class="td">데이터 전송 실패</td>
+                                    <td class="td download-button-container"><button class="download-button"><img src="img/refresh_red.svg"><span class="error">재전송</span></button></td>
+                                   
+                                </tr>
+                            </tbody>
+                        </table>
             </div>
             
         </div></div>
         </main>
     </main>
     
-<script>
-function loadPdf(url) {
-    const pdfViewer = document.getElementById('pdf-viewer');
-    pdfViewer.src = url; // PDF 파일 URL 설정
-}
 
-// PDF 파일 URL 예시
-loadPdf('path/to/result.pdf');
-</script>
 </body>
 </html>

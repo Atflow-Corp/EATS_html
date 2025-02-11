@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Logo.png" type="image/png">
+    <link rel="stylesheet" href="main2.css">
+    <title>검사 시작</title>
+</head>
+<body><div class="content">
+    <div class="block-head2"><img src="img/2logo.svg" width="100px"><img id="menu-icon" src="img/more.svg" alt="메뉴 아이콘"></div>
+    <div id="menu" class="menu hidden">
+        <ul>
+            <!-- 현재 로그인한 계정 -->
+            <li id="current-account" class="current-account"><strong>abcd@abc.com</strong></li>
+            <!-- 다른 계정 목록 -->
+            <li class="account-list">
+                <span>계정 전환:</span>
+                <ul id="other-accounts">
+                    <!-- JavaScript로 동적으로 계정 추가 -->
+                </ul>
+            </li>
+            <!-- 로그아웃 -->
+            <li class="logout">로그아웃</li>
+            <!-- 계정 추가 -->
+            <li class="add-account">+ 계정 추가</li>
+        </ul>
+    </div>
+    <div class="device-background">
+       
+    <div class="block3-center">
+        <div class="h2">화면 조정이 완료되었습니다.</div>
+        <div class="h3" style="text-align: center;">아래 검사 시작 버튼을 선택해주세요.</div>
+    
+        <button class="button-basic360">검사 시작</button>
+            </div>
+
+        <script>
+            
+                    document.addEventListener("DOMContentLoaded", () => {
+    const menuIcon = document.getElementById("menu-icon");
+    const menu = document.getElementById("menu");
+
+    menuIcon.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+             // 다른 곳을 클릭하면 메뉴 닫기
+    document.addEventListener("click", (event) => {
+        if (!menu.contains(event.target) && event.target !== menuIcon) {
+            menu.classList.add("hidden");
+        }
+    });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const currentAccountElement = document.getElementById("current-account");
+    const otherAccounts = ["efdgd@abc.com", "test123@abc.com", "example@abc.com"]; // 초기 계정 리스트
+    const otherAccountsList = document.getElementById("other-accounts");
+
+    // 다른 계정 동적으로 추가
+    otherAccounts.forEach((account) => {
+        const accountItem = document.createElement("li");
+        accountItem.textContent = account;
+        accountItem.classList.add("switch-account");
+        accountItem.addEventListener("click", () => {
+            // 현재 계정 업데이트
+            const currentAccount = currentAccountElement.querySelector("strong").textContent;
+            currentAccountElement.querySelector("strong").textContent = account;
+
+            // 선택한 계정을 다른 계정 리스트로 이동
+            accountItem.textContent = currentAccount;
+            otherAccountsList.appendChild(accountItem);
+
+            alert(`계정 전환 완료: ${account}`);
+        });
+        otherAccountsList.appendChild(accountItem);
+    });
+
+    // 로그아웃 이벤트
+    document.querySelector(".logout").addEventListener("click", () => {
+        alert("로그아웃 되었습니다.");
+    });
+
+    // 계정 추가 이벤트
+    document.querySelector(".add-account").addEventListener("click", () => {
+        alert("새 계정을 추가합니다.");
+    });
+});
+                    })
+</script></div>
+
+        </body>
+        </html>
