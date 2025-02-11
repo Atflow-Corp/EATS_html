@@ -899,6 +899,7 @@ a:hover {
     cursor: pointer; /* 커서를 포인터로 변경 */
     background: var(--Error-500, #E3352F); /* 배경색 약간 어둡게 */
     color: var(--White-100, #F9FAFB); /* 텍스트 색상 유지 */
+}
 
 /* 리소스 다운로드 화면 */
 .loading-overlay {
