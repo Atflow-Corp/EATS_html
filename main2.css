@@ -880,3 +880,16 @@ a:hover {
         transform: rotate(360deg);
     }
 }
+.exit-app {
+    padding: 10px; /* 패딩 설정 */
+    color: #F97066!important; /* 텍스트 색상 설정 (예: 빨간색) */
+    cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+    display: flex; /* 수직 가운데 정렬을 위해 flex 사용 */
+    align-items: center; /* 수직 가운데 정렬 */
+    justify-content: flex-start; /* 수직 가운데 정렬 */
+    gap: 10px; /* 이미지와 텍스트 간격 설정 */
+}
+
+.exit-app:hover {
+    background-color: #FFE6E6; /* 마우스 오버 시 배경색 변경 */
+}
