@@ -413,7 +413,6 @@ input[type="checkbox"]:focus {
     gap: 16px; /* 각 행 간 간격 */
     width: 100%;
     padding: 24px;
-    border-bottom: #EAECF0;
     box-sizing: border-box; /* 패딩 포함 크기 계산 */
 }
 .my-row {
@@ -421,8 +420,6 @@ input[type="checkbox"]:focus {
     align-items: flex-start; /* 수직 중앙 정렬 */
     width: 100%; /* 컨테이너 너비 */
     padding: 16px 0px;
-    border-bottom: 1px solid transparent; /* 기본 보더 설정 */
-    border-top: 1px solid #EAECF0; /* 상단 보더 1px */
     border-bottom: 1px solid #EAECF0; /* 하단 보더 1px */
     box-sizing: border-box;
     min-height: auto; /* 최소 높이 설정 */
@@ -3046,7 +3043,7 @@ table {
 }
 .pdf-header2main{
     text-align: center;
-    font-size: 40px;
+    font-size: 36px;
     color: var(--Gray-900, #101828); /* Changed from font-color to color */
     font-weight: 800;
 }
@@ -3280,7 +3277,7 @@ line-height: normal;
 }
 
 .minimal-table td img {
-    width: 200px; /* 이미지 넓이 200px */
+    width: 300px; /* 이미지 넓이 200px */
     height: auto; /* 비율 유지 */
 }
 
@@ -3373,4 +3370,24 @@ margin-left: 8px;
     font-size: 14px;
     font-weight: 800;
     line-height: 24px; /* 150% */
+}
+
+.language-selector {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.language-selector select {
+    padding: 8px 12px;
+    border: 1px solid #E4E7EC;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 14px;
+    color: #344054;
+    cursor: pointer;
+}
+
+.language-selector select:hover {
+    border-color: #D0D5DD;
 }
