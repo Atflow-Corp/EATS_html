@@ -945,7 +945,6 @@ input[type="checkbox"]:focus {
     gap: 8px; /* 내부 콘텐츠 간격 */
     padding: 32px;
     flex-shrink: 0;
-    border-right: 1px solid var(--Gray-200, #EAECF0);
     background: var(--White-100, #F9FAFB);
 }
 .name-block{
