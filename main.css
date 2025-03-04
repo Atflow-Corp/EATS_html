@@ -3277,7 +3277,7 @@ line-height: normal;
 }
 
 .minimal-table td img {
-    width: 300px; /* 이미지 넓이 200px */
+    width: 350px; /* 이미지 넓이 350px */
     height: auto; /* 비율 유지 */
 }
 
@@ -3403,5 +3403,5 @@ margin-left: 8px;
     box-sizing: border-box;
     align-items: center;
     text-align: left;
-    font-size: 16px;
+    font-size: 14px;
 }
