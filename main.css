@@ -3391,3 +3391,17 @@ margin-left: 8px;
 .language-selector select:hover {
     border-color: #D0D5DD;
 }
+.report-box4{
+    margin-top: 10px;
+    margin-bottom: 25px;
+    background-color: #F9FAFB;
+    padding: 10px 30px 10px 10px; /* 상단, 우측, 하단, 좌측 순서 */
+    border: 1px solid #667085;
+    border-radius: 10px;
+    width: 95%;
+    margin-left: 20px;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: left;
+    font-size: 16px;
+}
