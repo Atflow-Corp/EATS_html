@@ -8,7 +8,11 @@
     <title>홈-환자없음</title>
 </head>
 <body><div class="content">
-    <div class="block-head2"><img src="img/2logo.svg" width="100px"><img id="menu-icon" src="img/more.svg" alt="메뉴 아이콘"></div>
+    <div class="block-head2"><img src="img/2logo.svg" width="100px">
+        <div class="block-head">사용자 이름<div class="language-selector">
+            <button class="lang-button selected" onclick="changeLanguage('ko')">한글</button>
+            <button class="lang-button" onclick="changeLanguage('en')">EN</button>
+        </div><img id="menu-icon" src="img/more.svg" alt="메뉴 아이콘"></div></div>
     <div id="menu" class="menu hidden">
         <ul>
             <!-- 현재 로그인한 계정 -->
