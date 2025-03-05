@@ -8,8 +8,10 @@
     <title>로그인</title>
 </head>
 <body>
-    <div class="new-background">
+    <div class="new-background">         
         <div class="new-container">
+           <!-- 언어 선택 버튼 그룹 추가 -->
+       
             <div class="new-left-block">
                 <div class="left-block">
                 <div class="new-text-box">
@@ -42,13 +44,7 @@
             </div>
             <div class="new-right-block">
                 <div class="right-block">
-                    <!-- 언어 선택 메뉴 추가 -->
-                    <div class="language-selector">
-                        <select id="languageSelect" onchange="changeLanguage()">
-                            <option value="ko">한국어</option>
-                            <option value="en">English</option>
-                        </select>
-                    </div>
+            
                     <!-- 상단 로그인 창 -->
                     <div class="login-container">
                         <h2>로그인</h2>
@@ -77,14 +73,18 @@
         <div class="additional-links" style="margin-top: 24px;">    
             <label class="signin-label"> 아직 회원가입을 안하셨나요? </label><a href="#" class="password-recovery-link">회원가입</a>
         </div>
-    </div></div>
+    </div> </div>
                     <!-- 하단 푸터 박스 -->
                     <div class="footer-box" style="background: var(--Gray-100, #F2F4F7);">
                         <div class="footer-content">
+                            <div class="language-selector">
+                                <button class="lang-button selected" onclick="changeLanguage('ko')">한국어</button>
+                                <button class="lang-button" onclick="changeLanguage('en')">ENG</button>
+                            </div>
                             <a href="#" class="footer-link">서비스 이용약관</a><p>
                             <a href="#" class="footer-link">개인정보 처리 방침</a><p>
                             <span>Copyright ⓒ Purpletalk co.,Ltd</span>
-                            <span>사업자 등록번호</span>
+                            <span>사업자 등록번호 189-81-02178</span>
                             <span>대표 : 하헌진</span>
                             <span>cs@eats.kr</span>
                             <span>서울 강남구 역삼로 165 해성빌딩</span>

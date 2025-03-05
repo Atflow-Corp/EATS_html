@@ -83,16 +83,21 @@
      <div id="delaccount-modal" class="modal" style="display: none;">
         <div class="modal-content">
             <div class="h2">정말로 탈퇴하시겠습니까?</div>
-            <div class="input-label"> 탈퇴하기 버튼 선택 시 고객센터에 전달됩니다. <br>탈퇴 이후의 데이터는 복구할 수 없습니다.</div>
+            <div class="input-label"> 탈퇴는 고객센터를 통해서만 가능합니다. 탈퇴 시 현재 발급된 라이선스가 제거될 수 있으며, 등록했던 환자 데이터가 삭제될 수 있습니다. 자세한 내용은 고객센터를 통해 안내 받으시기 바랍니다. (cs@autizon.com)</div>
     
             <div class="modal-actions">
                
-                <button class="cancel-button" onclick="closeDelaccountModal()">취소</button>
-                <button class="button2-my">탈퇴하기</button>
+               
+                <button class="confirm-button" onclick="closedelaccountModal()">확인</button>
             </div>
         </div>
     </div>
     <script src="path/to/your-script.js"></script>
+    <script>
+        function closedelaccountModal() {
+            document.getElementById("delaccount-modal").style.display = "none"; // 모달을 숨김
+        }
+    </script>
 
 <script>
     // 모든 모달 닫기
