@@ -319,6 +319,18 @@ a:hover {
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
     cursor: not-allowed; /* Pointer to show it's disabled */
 }
+.confirm-button:hover {
+    color: var(--White-60, #98A2B3);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 28px; /* 155.556% */
+    border-radius: 8px;
+    border: 1px solid var(--Brand-900, #2D3282);
+    background: var(--Brand-900, #3538CD);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    cursor: not-allowed; /* Pointer to show it's disabled */
+}
 .modal {
     display: none; /* 기본적으로 숨김 */
     position: fixed;
@@ -843,6 +855,59 @@ a:hover {
     flex-shrink: 0;
 }
 
+.button-group{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    justify-content: center; /* 가운데 정렬을 위해 추가 */
+}
+.button-group-home{
+    display: flex;
+    width: 40%;
+    align-items: center; /* flex-start에서 center로 변경 */
+    padding: 16px 28px;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid var(--BG1, #545356);
+    background: var(--BG1, #545356);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: var(--White-100, #F9FAFB);
+    font-family: Pretendard;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 28px; /* 155.556% */
+}
+.button-group-home:hover {
+    cursor: pointer; /* 커서를 포인터로 변경 */
+    background: var(--BG1, #4C4F54); /* 배경색 약간 어둡게 */
+    color: var(--White-100, #F9FAFB); /* 텍스트 색상 유지 */
+}
+
+.button-group-retry{
+    display: flex;
+    width: 40%;
+    align-items: center; /* flex-start에서 center로 변경 */
+    padding: 16px 28px;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid var(--Error-500, #F04438);
+    background: var(--Error-500, #F04438);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: var(--White-100, #F9FAFB);
+    font-family: Pretendard;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 28px; /* 155.556% */
+}
+.button-group-retry:hover {
+    cursor: pointer; /* 커서를 포인터로 변경 */
+    background: var(--Error-500, #E3352F); /* 배경색 약간 어둡게 */
+    color: var(--White-100, #F9FAFB); /* 텍스트 색상 유지 */
+}
+
 /* 리소스 다운로드 화면 */
 .loading-overlay {
     position: fixed;
@@ -957,3 +1022,4 @@ line-height: 20px; /* 142.857% */
 .lang-button:last-child {
     border-radius: 0 8px 8px 0; /* 두 번째 버튼의 오른쪽 모서리 둥글게 */
 }
+
