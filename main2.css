@@ -182,7 +182,7 @@ a:hover {
 .block-center {
     width: 360px;
     max-width: 360px; /* 최대 너비 제한 */
-    gap: 20px;
+    gap: 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -989,6 +989,36 @@ a:hover {
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
     
 }
+.lang-buttonblue {
+    margin: 0; /* 버튼 간의 간격 제거 */
+    border-radius: 0; /* 버튼의 모서리 둥글기 제거 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    border: none; /* 기본 테두리 제거 */
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    padding: 10px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--Gray-300, #D0D5DD);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    
+}
+.lang-buttonblue.selected {
+    
+    border: 1px solid #444CE7;
+    
+    background: var(--White-100, #444CE7);
+    color: var(--Gray-700, #F9FaFB);
+/* Text sm/Bold */
+font-family: Pretendard;
+font-size: 14px;
+font-style: normal;
+font-weight: 800;
+line-height: 20px; /* 142.857% */
+}
 
 .lang-button.selected {
     background: #667085; /* 선택된 버튼의 배경색 */
@@ -1014,12 +1044,29 @@ line-height: 20px; /* 142.857% */
     font-weight: 800;
     line-height: 20px; /* 142.857% */
 }
+.lang-buttonblue:not(.selected) {
+    background: none; /* 배경색 설정 */
+    border: 1px solid #444CE7; /* 선택 가능한 버튼에 테두리 추가 */
+    cursor: pointer;
+    color: var(--Gray-100, #444CE7);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 20px; /* 142.857% */
+}
 
 .lang-button:first-child {
+    border-radius: 8px 0 0 8px; /* 첫 번째 버튼의 왼쪽 모서리 둥글게 */
+}
+.lang-buttonblue:first-child {
     border-radius: 8px 0 0 8px; /* 첫 번째 버튼의 왼쪽 모서리 둥글게 */
 }
 
 .lang-button:last-child {
     border-radius: 0 8px 8px 0; /* 두 번째 버튼의 오른쪽 모서리 둥글게 */
 }
+.lang-buttonblue:last-child {
+    border-radius: 0 8px 8px 0; /* 두 번째 버튼의 오른쪽 모서리 둥글게 */
+}
+
 
