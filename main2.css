@@ -1021,9 +1021,7 @@ line-height: 20px; /* 142.857% */
 }
 
 .lang-button.selected {
-    background: #667085; /* 선택된 버튼의 배경색 */
     border: 1px solid #D0D5DD;
-    color: white; /* 선택된 버튼의 텍스트 색상 */
     background: var(--White-100, #F9FAFB);
     color: var(--Gray-700, #344054);
 /* Text sm/Bold */
