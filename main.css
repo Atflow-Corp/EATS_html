@@ -55,9 +55,11 @@ input[type="checkbox"]:focus {
     align-items: center;
 }
 
+
 .logo-area {
     display: flex;
     align-items: center;
+    gap: 16px;
 }
 
 .logo {
@@ -83,6 +85,7 @@ input[type="checkbox"]:focus {
     .login-area {
         flex: 1; /* 로그인 영역 확장 */
         justify-content: flex-end; /* 로그인 텍스트 우측 정렬 */
+        gap: 12px;
     }
 
     .login-text {
@@ -168,20 +171,18 @@ input[type="checkbox"]:focus {
     display: flex;
     align-items: center;
     justify-content: flex-end; /* 우측 정렬 */
+    color: var(--Gray-900, #101828);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    gap: 12px;
 }
 
 
 .letters {
     width: 62px;
     margin-left: 4px; /* 로고와 레터 간격 */
-}
-
-.login-area {
-    color: var(--Gray-900, #101828);
-    text-align: center;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
 }
 
 .outer-container {
@@ -357,6 +358,14 @@ input[type="checkbox"]:focus {
         text-align: center; /* 중앙 정렬 */
     }
     .language-selector {
+        display: flex;
+        align-items: center; /* 세로 중앙 정렬 */
+        text-align: center; /* 중앙 정렬 */
+        justify-content: center; /* 중앙 정렬 */
+        height: 28px;
+    }
+    .language-selector2 {
+        display: flex;
         align-items: center; /* 세로 중앙 정렬 */
         text-align: center; /* 중앙 정렬 */
         justify-content: center; /* 중앙 정렬 */
@@ -3383,6 +3392,13 @@ margin-left: 8px;
     align-items: center; /* 세로 중앙 정렬 */
     margin-bottom: 12px;
 }
+
+.language-selector2 {
+    display: flex; /* 플렉스 박스 사용 */
+    margin: 0; /* 버튼 간의 간격 제거 */
+    align-items: center; /* 세로 중앙 정렬 */
+}
+
 
 .lang-button {
     margin: 0; /* 버튼 간의 간격 제거 */
