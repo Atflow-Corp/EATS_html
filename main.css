@@ -2088,6 +2088,10 @@ line-height: 28px; /* 155.556% */
     gap: 8px; /* 이미지와 텍스트 사이 간격 */
 }
 
+.user-name {
+    line-height: initial;
+}
+
 .profile-icon {
     width: 32px; /* 이미지 너비 */
     height: 32px; /* 이미지 높이 */
