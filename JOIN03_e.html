@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Logo.png" type="image/png">
+    <link rel="stylesheet" href="main.css">
+    <title>Terms & Conditions</title>
+</head>
+<body>
+
+        <nav class="top-nav">
+            <div class="nav-container">
+                <div class="logo-area">
+                    <img src="img/logo.png" alt="Logo" class="logo">
+                    <img src="img/letters.svg" alt="Letters" class="letters">
+                </div>
+                <div class="login-area">
+                    <span class="login-text" id="loginText">Sign in</span>
+                    <div class="user-info" id="userInfo" style="display: none;">
+                        <img src="img/profile.svg" alt="프로필" class="profile-icon">
+                        <span class="user-name">username</span>
+                    </div> <!-- 로그인 후 사용자 이름 표시 -->
+                </div>
+            </div>
+        </nav>
+        <main class="main-content">
+            <div class="box3">
+                <h1 class="title" style="margin-bottom: 32px;">Terms & Conditions</h1>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="agreeAll" onchange="toggleAllCheckboxes(this)">
+                    I agree to all terms & policies.
+                </label>
+                <hr class="divider">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="ageCheck" class="custom-checkbox">
+                    <span class="custom-checkbox-indicator"></span>
+                    (Req.)
+                    <a href="#" style="color: #444CE7;"> Confirm you are 14 or older</a>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="termsOfService">(Req.)
+                    <a href="#" style="color: #444CE7;"> Agree to Terms of Service</a>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="privacyPolicy">(Req.)
+                    <a href="#" style="color: #444CE7;"> Agree to Privacy Policy</a>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="thirdParty">(Req.)
+                    <a href="#" style="color: #444CE7;"> Agree to Third-Party Data Sharing</a>
+                </label>
+                <label class="checkbox-label" style="margin-bottom: 32px;">
+                    <input type="checkbox" id="marketing">(Opt.)
+                    <a href="#" style="color: #444CE7;"> Agree to Marketing Communications
+                    </a>
+                </label>
+                <div class="button-container" style="margin-top: 32px;">
+                    <button class="previous-button" onclick="goToPrevious()">Previous</button>
+                    <button class="agree-button" id="agreeButton" onclick="goToNext()" disabled>Agree</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function goToPrevious() {
+            window.location.href = 'JOIN02.html'; // 이전 페이지로 이동
+        }
+
+        function goToNext() {
+            // 다음 페이지로 이동하는 로직 추가
+            alert('다음 페이지로 이동합니다.'); // 예시로 알림창 표시
+        }
+
+        function toggleAllCheckboxes(checkbox) {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const agreeButton = document.getElementById('agreeButton');
+            
+            checkboxes.forEach((cb) => {
+                cb.checked = checkbox.checked;
+            });
+
+            // 모든 체크박스가 체크되었는지 확인
+            const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+            
+            // 동의 버튼 활성화/비활성화
+            if (allChecked) {
+                agreeButton.classList.add('active');
+                agreeButton.removeAttribute('disabled');
+            } else {
+                agreeButton.classList.remove('active');
+                agreeButton.setAttribute('disabled', true);
+            }
+        }
+
+    </script>
+</body>
+</html> 
