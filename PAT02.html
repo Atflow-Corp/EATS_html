@@ -49,7 +49,7 @@
                                 <th class="th">누적 검사 횟수</th>
                                 <th class="th">마지막 검사일</th>
                                 <th class="th">상태</th>
-                                <th class="th"></th>
+                                
                             </tr>
                         </thead>
                         <tbody>
@@ -61,7 +61,7 @@
                                 <td data-label="누적 검사 횟수" class="td">0회</td>
                                 <td data-label="마지막 검사일" class="td">-</td>
                                 <td class="td">검사 대기중</td>
-                                <td data-label="관리" class="td"><button class="delete-button" onclick="openModal('홍길동', event)"><img src="img/trash.svg" class="button-delete"></button></td>
+                              
                             </tr>
                             <tr>
                                 <td class="td">621441</td>
@@ -71,7 +71,7 @@
                                 <td class="td">1회</td>
                                 <td class="td">2024.12.31</td>
                                 <td class="td">검사 대기중</td>
-                                <td class="td"><button class="delete-button" onclick="openModal('임*정', event)"><img src="img/trash.svg" class="button-delete"></button></td>
+                                
                             </tr>
                             <tr>
                                 <td class="td">33689111</td>
@@ -81,7 +81,7 @@
                                 <td class="td">0회</td>
                                 <td class="td">검사 전</td>
                                 <td class="td">검사 전</td>
-                                <td class="td"><button class="delete-button" onclick="openModal('심*민', event)"><img src="img/trash.svg" class="button-delete"></button></td>
+                                
                             </tr>
                             <tr>
                                 <td class="td">872078</td>
@@ -91,7 +91,7 @@
                                 <td class="td">1회</td>
                                 <td class="td">2024.1.19</td>
                                 <td class="td">분석 완료</td>
-                                <td class="td"><button class="delete-button" onclick="openModal('현*빈', event)"><img src="img/trash.svg" class="button-delete"></button></td>
+                               
                             </tr>
                             <tr>
                                 <td class="td">373487373487</td>
@@ -101,7 +101,7 @@
                                 <td class="td">3회</td>
                                 <td class="td">2024.1.11</td>
                                 <td class="td" style="color: var(--Red-500, #F04438);">분석 실패</td>
-                                <td class="td"><button class="delete-button" onclick="openModal('이*민', event)"><img src="img/trash.svg" class="button-delete"></button></td>
+                                
                             </tr>
                         </tbody>
                     </table>
@@ -132,19 +132,7 @@
         </main>
     </div>
     <!-- 공통 모달 팝업 -->
-    <div id="delete-modal" class="modal">
-        <div class="modal-content">
-            <!-- 타이틀 -->
-        <h2 id="delete-title"></h2>
-        <!-- 본문 -->
-        <p id="delete-message">등록된 환자 정보가 완전히 삭제됩니다.</p>
-            <div class="modal-actions">
-               
-                <button class="cancel-button" onclick="closeModal()">취소</button>
-                <button class="confirm-button" onclick="confirmDeleteAction()">삭제</button>
-            </div>
-        </div>
-    </div>
+    
 
     <div id="register-modal" class="modal">
         <div class="modal-register">
