@@ -11,27 +11,25 @@
     
     <div class="device-background">
        
-    <div class="block3-center">
-        <div class="h2">5초 후 화면 조정을 시작합니다.</div>
-        <div class="h3">1. 다음 화면에서 대상자의 얼굴 크기를 맞춘 후 <font color="#444CE7">[CALIBRATE]</font>을 선택하세요.<p>2. 대상자는 움직이는 점을 쳐다보세요. 보호자는 눈을 가립니다.<p>3. 재조정이 필요없으면 <font color="#444CE7">[USE CALIBRATION]</font>을 선택해주세요.</div>
-            <div class="h3" id="countdown">5</div>
+    <div class="precali-headbox">
+        <h1 class="h2">화면 조정을 시작합니다.</h1>
+        <div class="precali-container">
+         
+                <div class="precali-box">
+                    <img src="img/guide1.png" width="312px">
+                    <div class="precali-text">아래 버튼을 누르면 시선 유도 영상이 재생됩니다.<p>
+                        화면을 쳐다볼 때, 하단의 조정 시작 버튼을 눌러주시면 됩니다.</div>
+                </div>  
+                <div class="precali-box">
+                    <img src="img/guide2.png" width="312px">
+                    <div class="precali-text">대상자의 얼굴 크기를 맞춘 후 <font color="#01E7DB">[CALIBRATE]</font>을 선택하세요.<p>진행 후, 재조정이 필요없으면 <font color="#01E7DB">[USE CALIBRATION]</font>을 선택해주세요.</p></div>
+                </div>
+              
+        </div> <button class="button-basic">시선유도 영상 재생 시작</button> 
+       
 
         <script>
-            //카운트 다운
-            document.addEventListener("DOMContentLoaded", () => {
-        let countdownElement = document.getElementById("countdown");
-        let countdownValue = 5; // 카운트다운 시작값
-
-        const countdownInterval = setInterval(() => {
-            countdownValue--;
-            countdownElement.textContent = countdownValue;
-
-            if (countdownValue <= 0) {
-                clearInterval(countdownInterval);
-                countdownElement.textContent = "시작합니다!";
-            }
-        }, 1000); // 1초마다 실행
-    });
+         
                     document.addEventListener("DOMContentLoaded", () => {
     const menuIcon = document.getElementById("menu-icon");
     const menu = document.getElementById("menu");

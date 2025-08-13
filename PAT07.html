@@ -104,7 +104,7 @@
                                     <td class="td">2024.10.24.</td>
                                     <td class="td">2024.10.23.</td>
                                     <td class="td">분석 완료</td>
-                                    <td class="td download-button-container"><button class="download-button"><img src="img/report_view.svg">리포트 조회</button></td>
+                                    <td class="td download-button-container"><button class="report-button-doctor"><img src="img/file_w.svg">의료진용 리포트</button><button class="report-button-patient"><img src="img/file_w.svg">보호자용 리포트</button></td>
                                    
                                 </tr>
                                 <tr>
@@ -122,6 +122,46 @@
         </main>
     </main>
     
+    <!-- 삭제 확인 모달 -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <h3 style="margin: 0 0 16px 0; color: var(--Gray-900, #101828); font-size: 18px; font-weight: 600;">환자 정보 삭제</h3>
+            <p style="margin: 0 0 24px 0; color: var(--Gray-600, #475467); font-size: 14px; line-height: 20px;">
+                <span id="patientName"></span> 환자 정보를 삭제하시겠습니까?<br><br>
+                삭제하면 시스템에서 해당 환자 정보를 볼 수 없게 됩니다.<br>
+                복구를 원하시면 EATS 고객센터로 연락하셔야 합니다.
+            </p>
+            <div class="modal-actions">
+                <button class="cancel-button" onclick="closeDeleteModal()">취소</button>
+                <button class="confirm-button" onclick="confirmDelete()">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(patientName, event) {
+            event.preventDefault();
+            document.getElementById('patientName').textContent = patientName;
+            document.getElementById('deleteModal').style.display = 'flex';
+        }
+        
+        function closeDeleteModal() {
+            document.getElementById('deleteModal').style.display = 'none';
+        }
+        
+        function confirmDelete() {
+            // 여기에 실제 삭제 로직을 구현할 수 있습니다
+            alert('환자 정보가 삭제되었습니다.');
+            closeDeleteModal();
+        }
+        
+        // 모달 외부 클릭 시 닫기
+        document.getElementById('deleteModal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeDeleteModal();
+            }
+        });
+    </script>
 
 </body>
 </html>

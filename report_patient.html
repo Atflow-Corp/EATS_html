@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Logo.png" type="image/png">
+    <link rel="stylesheet" href="main.css">
+    <title>검사 결과</title>
+
+</head>
+<body class="pdf-body">
+
+    <!-- 닫기, 인쇄, PDF 저장 버튼 -->
+    <div class="pdf-button-container">
+        <button class="download-button" onclick="window.close()"><img src="img/x.svg">닫기</button>
+        <button class="print-button" onclick="window.print()"><img src="img/printer.svg">인쇄하기</button>
+       
+    </div>
+
+    <!-- 페이지 컨테이너 -->
+    <div class="pdf-container">
+        <!-- 1페이지: 의료기기 사용 안내 및 주의사항 -->
+        <div class="pdf-page pdf-active" id="pdf-page1">
+            <div class="pdf-header-container4">
+                <div class="pdf-header4container">
+                    <div class="pdf-header2sub">사용자의 안전한 사용을 위한</div>
+                    <div class="pdf-header2main">의료기기 사용 안내 및 주의사항</div>
+                </div>
+            </div>
+            
+            <div class="pdf-content">
+                <div class="pdf-title">1. 본 의료기기는 진단 보조용 기기입니다.</div>
+                <div class="report-box4">
+                    <ul>
+                        <li>본 기기는 시선 추적 및 분석을 통해 자폐 스펙트럼 장애(Autism Spectrum Disorder, ASD)와 같은 신경발달장애의 조기 식별 및 평가를 보조하도록 설계된 <b>진단 보조용 기기</b>입니다. 
+                        </li>
+                        <li>본 기기는 시각적 주의 및 시선 패턴에 대한 객관적인 바이오마커와 통찰을 제공하며, 임상 및 연구 환경에서 훈련된 의료 전문가에 의해 사용하도록 제작되었습니다.</li>
+                        <li>본 기기는 의사의 진단을 보조하는 목적으로 개발되었으며, <b>최종적인 진단 및 의학적 판단은 반드시 전문의가 내립니다.</b></li>
+                    </ul>
+                </div>
+                <div class="pdf-title">2. 사용가능 대상 및 제한 사항</div>
+                <div class="report-box4">
+                    <ul>
+                        <li>본 기기는 <b>16개월에서 38개월 사이 영유아</b>의 시선 추적을 통한 자폐스펙트럼장애 선별 검사를 지원합니다.
+                        </li>
+                        <li>검사 대상 영유아는 <b>시각 기능에 이상이 없는 경우에 한하여 사용 가능합니다.</b>시각적 문제가 있는 경우 검사 결과의 신뢰도가 저하될 수 있습니다.</li>
+                    </ul>
+                </div>
+                <div class="pdf-title">3. 검사결과의 변동가능성</div>
+                <div class="report-box4">
+                    <ul>
+                        <li>검사 당시 영유아의 컨디션(예: 피로, 집중력, 기분 등)에 따라 검사 결과가 영향을 받을 수 있습니다.
+                        </li>
+                        <li>최상의 검사 환경을 위해 <b>영유아가 편안한 상태에서 검사를 진행하는 것이 권장됩니다.</b></li>
+                    </ul>
+                </div>
+                <div class="pdf-title">4. 검사주기 권장사항</div>
+                <div class="report-box4">
+                    <ul>
+                        <li>미국소아의학회(America Academy of Pediatrics, AAP)에서는 <b>30개월 이전에 적어도 3번 이상의 ASD 검사를 받을 것을 권장합니다.</b>
+                        </li>
+                        <li>조기 선별 검사는 자폐스펙트럼장애를 보다 신속하게 발견하고, 필요한 경우 조기에 개입할 수 있도록 돕습니다.</li>
+                        <li>본 안내문을 숙지하시고, <b>사용 전 반드시 의료 전문가와 상담하시기 바랍니다.</b></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2페이지: 환자 정보 및 진단 결과 요약 -->
+        <div class="pdf-page" id="pdf-page2">
+            <div class="pdf-header-container">
+                <div class="pdf-header2container">
+                    <div class="pdf-header2sub">자폐스펙트럼장애 진단</div>
+                    <div class="pdf-header2main">결과 보고서</div>
+                </div>
+                <div class="pdf-header1">
+                    <div class="pdf-header-container-left">
+                        <div class="pdf-label">검사기관명</div>
+                        <div class="pdf-label-content">ㅇㅇㅇㅇ병원</div>
+                    </div>
+                    <div class="pdf-header-container-left">
+                        <div class="pdf-label">주소</div>
+                        <div class="pdf-label-content">서울특별시 강남구 xx로 123</div>
+                    </div>
+                    <div class="pdf-header-container-left">
+                        <div class="pdf-label">연락처</div>
+                        <div class="pdf-label-content">02-123-3455</div>
+                    </div>
+                    <div class="pdf-header-container-left">
+                        <div class="pdf-label">담당의사</div>
+                        <div class="pdf-label-content">김의사</div>
+                    </div>
+                </div>
+            </div>  
+            <div class="pdf-content">
+              <div class="pdf-title">1. 환자 정보</div>
+              <div class="report-table-container">
+                <table class="report-table">
+                    <tr>
+                        <th>이름</th>
+                        <td class="patient-info-cell">홍길동</td>
+                        <th>ID</th>
+                        <td class="patient-info-cell">1234-56</td>
+                        <th>성별</th>
+                        <td>남</td>
+                        <th>나이(개월)</th>
+                        <td>만 1세 (15개월)</td>
+                    </tr>
+                    <tr>
+                        <th>평가일</th>
+                        <td colspan="3">2025년 1월 29일</td>
+                        <th>평가도구</th>
+                        <td colspan="3">EATS v1.0</td>
+                    </tr>
+                </table></div>
+                <div class="pdf-title">2. 진단 결과 요약 : <span class="result-value-simple negative">자폐스펙트럼장애(ASD) 음성</span><span class="result-value-simple positive">자폐스펙트럼장애(ASD)양성</span></div>
+                <div class="graph-area" style="max-height: 300px; overflow: hidden; display: flex; flex-direction: column;">
+                    <p style="font-size: 18px; text-align: center; margin-block-start: 0; margin-block-end: 0;">
+                        AOI Vacancy Count Percentage* (%)
+                    </p>
+                    <div style="flex: 1; min-height: 0;">
+                        <canvas id="aoiVacancyChart"></canvas>
+                    </div>
+                    <p id="aoiSummaryText" style="font-size: 16px; text-align: center; margin-block-end: 0;"></p>
+                </div>
+                <div class="report-desc">*AVC(AOI Vacancy count percentage) 수치가 높게 나올수록 ASD일 가능성이 높다는 의미</div>
+                <div class="pdf-title">3. 진단 내역</div>
+                <div class="report-table-container">
+                    <table class="report-table">
+                        <tr>
+                            <th></th>
+                            <th colspan="2">Video 1</th>
+                            <th>Video 2</th>
+                        </tr>
+                        <tr>
+                            <th>AOI<br>(관심영역)</th>
+                            <td><img src="img/eye1.png"></td>
+                            <td><img src="img/lips1.png"></td>
+                            <td><img src="img/attention1.png"></td>
+                        </tr>
+                        <tr>
+                            <th>측정 내용</th>
+                            <td colspan="2">- 마음이론 (Theory of Mind)<br>- 사회성<br>- 초기 언어발달</td>
+                            <td>- 공동주의 (Joint Attention)<br>- 사회적 의사소통 능력</td>
+                        </tr>
+                    </table></div>
+                    <div class="report-desc" style="text-align: left; page-break-inside: avoid; box-shadow: none;">*PCT/US 2023 / 08 2298</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 페이지 네비게이션 -->
+    <div class="pdf-pagination">
+        <button class="pdf-button" onclick="prevPage()">이전</button>
+        <div class="pdf-page-indicator">
+            <span class="pdf-dot pdf-dot-active"></span>
+            <span class="pdf-dot"></span>
+        </div>
+        <button class="pdf-button" onclick="nextPage()">다음</button>
+    </div>
+
+    <!-- Chart.js 라이브러리 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        /* 출력시 우측 잘리는 문제 해결 */
+        @media print {
+            canvas {
+                max-width: 100%;
+            }
+
+            .report-box4 {
+                padding-right: 10px;
+            }
+        }
+
+        /* 환자 이름, ID 여러줄로 보여주기 위한 스타일 */
+        .patient-info-cell {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            max-width: 250px;
+        }
+
+        th { text-wrap: nowrap; }
+        th, td { line-height: 1.2; }
+        .nowrap { white-space: nowrap; }
+    </style>
+
+    <script>
+        let currentPageId = 0;
+        const totalPages = 2; // 총 페이지 수를 2로 변경
+
+        function showPage(pageId) {
+            // 모든 페이지 숨기기
+            const pages = document.querySelectorAll('.pdf-page');
+            pages.forEach(page => page.classList.remove('pdf-active'));
+            
+            // 선택된 페이지 보이기
+            if (pages[pageId]) {
+                pages[pageId].classList.add('pdf-active');
+            }
+            
+            // 페이지 인디케이터 업데이트
+            updatePageIndicator(pageId);
+            
+            currentPageId = pageId;
+        }
+
+        function nextPage() {
+            if (currentPageId < totalPages - 1) {
+                showPage(currentPageId + 1);
+            }
+        }
+
+        function prevPage() {
+            if (currentPageId > 0) {
+                showPage(currentPageId - 1);
+            }
+        }
+
+        function updatePageIndicator(activePage) {
+            const dots = document.querySelectorAll('.pdf-dot');
+            dots.forEach((dot, index) => {
+                if (index === activePage) {
+                    dot.classList.add('pdf-dot-active');
+                } else {
+                    dot.classList.remove('pdf-dot-active');
+                }
+            });
+        }
+
+        // 페이지 로드 시 첫 번째 페이지 표시
+        document.addEventListener('DOMContentLoaded', function() {
+            showPage(0);
+        });
+    </script>
+
+</body>
+</html>

@@ -668,7 +668,7 @@ a:hover {
     font-size: 36px;
     font-style: normal;
     font-weight: 400;
-    line-height: 44px; /* 122.222% */
+    line-height: 40px; /* 122.222% */
     letter-spacing: -0.72px;
 }
 .patient-number{
@@ -731,7 +731,7 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: var(--gradient-gray-800700265-deg, linear-gradient(27deg, #1D2939 8.33%, #344054 91.67%));
+    background: var(--gradient-gray-800700265-deg, linear-gradient(90deg, #475467 0%, #667085 100%));
     border: 1px solid var(--gradient-gray-800700265-deg, #1D2939);
     border-radius: 16px;
     box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
@@ -1067,5 +1067,134 @@ line-height: 20px; /* 142.857% */
 .lang-buttonblue:last-child {
     border-radius: 0 8px 8px 0; /* 두 번째 버튼의 오른쪽 모서리 둥글게 */
 }
+.precali-headbox{
+    display: flex;
+flex-direction: column;
+align-items: center;
+gap: 40px;
+}
+.precali-container{
+    display: flex;
+    width: 732px;
+    height: 398px;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.precali-box{
+    display: flex;
+    width: 325px;
+    padding: 16px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+.precali-text{
+    width: 295px;
+    color: var(--White-100, #F9FAFB);
+    text-align: center;
+/* Display xs/Regular */
+font-family: Pretendard;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 32px; /* 133.333% */
+}
 
+/* VID04A 페이지 전용 스타일 */
+/* 백그라운드 비디오 스타일 */
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
 
+/* 우측 하단 버튼 스타일 */
+.adjust-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--Brand-900, #2D3282);
+    background: var(--Brand-900, #2D3282);
+    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+    color: var(--Brand-400, #8098F9);
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24px;
+    padding: 12px 24px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1000;
+}
+
+.adjust-button.visible {
+    opacity: 1;
+}
+
+/* 기존 콘텐츠가 비디오 위에 보이도록 */
+.content {
+    position: relative;
+    z-index: 1;
+}
+.report-button-patient{
+    display: flex;
+    border-radius: 8px;
+padding: 10px 18px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+border: 1px solid var(--Gray-300, #D0D5DD);
+
+/* Shadow/xs */
+box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+
+background: #4F8CFF;
+color: var(--Gray-25, #FCFCFD);
+
+/* Text md/Bold */
+font-family: Pretendard;
+font-size: 16px;
+font-style: normal;
+font-weight: 800;
+line-height: 24px; /* 150% */
+cursor: pointer;
+}
+.report-button-patient:hover{
+    background: #78A7FF;
+}
+.report-button-doctor{
+    display: flex;
+    border-radius: 8px;
+padding: 10px 18px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+border: 1px solid var(--Gray-300, #D0D5DD);
+
+/* Shadow/xs */
+box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+
+background: #22C55E;
+color: var(--Gray-25, #FCFCFD);
+
+/* Text md/Bold */
+font-family: Pretendard;
+font-size: 16px;
+font-style: normal;
+font-weight: 800;
+line-height: 24px; /* 150% */
+cursor: pointer;
+}
+.report-button-doctor:hover{
+    background: #4CCF7C;
+}
