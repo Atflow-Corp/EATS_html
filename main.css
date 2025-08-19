@@ -3623,13 +3623,13 @@ margin-left: 8px;
 
 /* 의료기기 사용 안내 페이지 제목 스타일 - 간격 줄임 */
 .pdf-page:last-child .pdf-title {
-    margin-top: 25px; /* 첫 번째 제목 상단 여백 줄임 */
+    margin-top: 20px; /* 첫 번째 제목 상단 여백 줄임 */
     margin-bottom: 8px; /* 제목과 박스 간격을 더 좁게 조정 */
     font-size: 18px; /* 제목 폰트 크기 */
     font-weight: 700; /* 제목 폰트 굵기 */
     color: #1F2937; /* 진한 제목 색상 */
     padding-bottom: 6px; /* 제목 하단 패딩 줄임 */
-    border-bottom: 2px solid #E5E7EB; /* 제목 하단 구분선 */
+   
 }
 
 .pdf-page:last-child .pdf-title:first-child {
@@ -3638,7 +3638,7 @@ margin-left: 8px;
 
 /* 의료기기 사용 안내 페이지 전체 컨텐츠 여백 조정 - 간격 줄임 */
 .pdf-page:last-child .pdf-content {
-    padding: 10px 30px 15px 30px; /* 상단과 하단 여백 줄임 */
+    padding: 10px 15px 15px 15px; /* 상단과 하단 여백 줄임 */
 }
 
 /* report-box4 박스 여백 최적화 - 제목과 더 가깝게 배치 */
