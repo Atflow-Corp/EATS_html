@@ -3300,19 +3300,19 @@ margin-left: 8px;
     border-radius: 0 16px 16px 0; /* 두 번째 버튼의 오른쪽 모서리 둥글게 */
 }
 .report-box4{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     background-color: #F9FAFB;
     padding: 20px 25px 20px 20px; /* 상단, 우측, 하단, 좌측 순서 - 더 넓은 여백 */
     border: 1px solid #D0D5DD; /* 더 부드러운 테두리 색상 */
     border-radius: 12px; /* 더 둥근 모서리 */
     width: 95%;
-    margin-left: 20px;
+    margin-left: 16px;
     box-sizing: border-box;
     align-items: center;
     text-align: left;
-    font-size: 15px; /* 폰트 크기 증가 */
-    line-height: 1.6; /* 줄 간격 증가로 가독성 향상 */
+    font-size: 14px; /* 폰트 크기 증가 */
+    line-height: 1.4; /* 줄 간격 증가로 가독성 향상 */
     box-shadow: 0 1px 3px rgba(16, 24, 40, 0.1); /* 부드러운 그림자 추가 */
 }
 
