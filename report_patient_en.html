@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Logo.png" type="image/png">
+    <link rel="stylesheet" href="main.css">
+    <title>검사 결과</title>
+
+</head>
+<body class="pdf-body">
+
+    <!-- 닫기, 인쇄, PDF 저장 버튼 -->
+    <div class="pdf-button-container">
+        <button class="download-button" onclick="window.close()"><img src="img/x.svg">닫기</button>
+        <button class="print-button" onclick="window.print()"><img src="img/printer.svg">인쇄하기</button>
+       
+    </div>
+
+    <!-- 페이지 컨테이너 -->
+    <div class="pdf-container">
+        <!-- 1페이지: 의료기기 사용 안내 및 주의사항 -->
+        <div class="pdf-page pdf-active" id="pdf-page1">
+            <div class="pdf-header-container4">
+                <div class="pdf-header4container">
+                    <div class="pdf-header2sub">Instructions for Use (IFU) and</div>
+                    <div class="pdf-header2main">Safety Precautions</div>
+                    <div class="eats-logo-small">
+                        <img src="img/eats_origin.png" alt="EATS Logo" width="150" height="auto">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pdf-content">
+                <div class="pdf-title">1. Diagnostic Support Medical Device</div>
+                <div class="report-box4">
+                    <ul>
+                        <li>This medical device is intended to support the clinical diagnosis by qualified healthcare professionals.</li>
+                        <li>This medical device provides objective biomarkers and insights related to visual attention and gaze patterns, and is intended for use by trained healthcare professionals in clinical and research settings. 
+                        </li>
+                        <li>It is not intended to be used as a stand-alone tool to establish a definitive diagnosis of Autism Spectrum Disorder (ASD). The final diagnosis and all medical decisions must be made by trained healthcare professionals.
+                        </li>
+                    </ul>
+                </div>
+                <div class="pdf-title">2. Intended Use and Intended Environment
+                </div>
+                <div class="report-box4">
+                    <ul>
+                        <li>This device is intended for use in infants and toddlers between 16 and 36 months of age. 
+
+                        </li>
+                        <li>This device is intended for use only in subjects without visual impairments. The presence of visual abnormalities may adversely affect the validity and reliability of the test results. 
+                        </li>
+                        <li>Testing is recommended in a controlled, quiet environment free from distractions, with the infant or toddler in a comfortable state, to ensure the reliability of the results.
+                        </li>
+                    </ul>
+                </div>
+                <div class="pdf-title">3. Interpretation of Results                </div>
+                <div class="report-box4">
+                    <ul>
+                        <li>The results obtained from this device are based on the analysis of visual attention and gaze patterns.
+                        </li>
+                        <li>The diagnosis of ASD must be made by trained healthcare professionals, based on clinical judgment that includes developmental history, behavioral observations, and other relevant assessments. 
+                        </li>
+                        <li>Test results may vary depending on the subject’s condition, environmental factors, and conditions of use.
+                        </li>
+                    </ul>
+                </div>
+                <div class="pdf-title">4. Considerations
+                </div>
+                <div class="report-box4">
+                    <ul>
+                        <li>The American Academy of Pediatrics (AAP) strongly recommends ASD screening for all children at 18 and 24 months of age, and further recommends that screening be repeated at least three times before 30 months of age. This device may be utilized as supportive diagnostic information at these recommended time points. 
+                        </li>
+                        <li>This device is limited to use as a diagnostic support tool and shall not be used as a basis for determining treatment decisions or prognostic outcomes.</li>
+                        <li>Users should review this information carefully and must consult with a healthcare professional.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2페이지: 환자 정보 및 진단 결과 요약 -->
+        <div class="pdf-page" id="pdf-page2">
+            <div class="pdf-header-container">
+                <div class="pdf-header2container">
+                    <div class="pdf-header2sub">자폐스펙트럼장애 진단</div>
+                    <div class="pdf-header2main">결과 보고서</div>
+                    <div class="eats-logo-small">
+                        <img src="img/eats_origin.png" alt="EATS Logo" width="150" height="auto">
+                    </div>
+                </div>
+                <div class="pdf-header1">
+                    <div class="pdf-header-container-left">
+                        <div class="pdf-label">검사기관명</div>
+                        <div class="pdf-label-content">ㅇㅇㅇㅇ병원</div>
+                    </div>
+                    <div class="pdf-header-container-left">
+                        <div class="pdf-label">주소</div>
+                        <div class="pdf-label-content">서울특별시 강남구 xx로 123</div>
+                    </div>
+                    <div class="pdf-header-container-left">
+                        <div class="pdf-label">연락처</div>
+                        <div class="pdf-label-content">02-123-3455</div>
+                    </div>
+                    <div class="pdf-header-container-left">
+                        <div class="pdf-label">담당의사</div>
+                        <div class="pdf-label-content">김의사</div>
+                    </div>
+                </div>
+            </div>  
+            <div class="pdf-content">
+              <div class="pdf-title">1. 환자 정보</div>
+              <div class="report-table-container">
+                <table class="report-table">
+                    <tr>
+                        <th>이름</th>
+                        <td class="patient-info-cell">홍길동</td>
+                        <th>ID</th>
+                        <td class="patient-info-cell">1234-56</td>
+                        <th>성별</th>
+                        <td>남</td>
+                        <th>생년월일(개월)</th>
+                        <td>2024.03.01 (15개월)</td>
+                    </tr>
+                    <tr>
+                        <th>평가일</th>
+                        <td colspan="3">2025년 1월 29일</td>
+                        <th>평가도구</th>
+                        <td colspan="3">EATS v1.0</td>
+                    </tr>
+                </table></div>
+                <div class="pdf-title">2. 진단 결과 요약 : <span class="result-value-simple negative">자폐스펙트럼장애(ASD) 음성</span><span class="result-value-simple positive">자폐스펙트럼장애(ASD)양성</span></div>
+                <div class="graph-area" style="max-height: 300px; overflow: hidden; display: flex; flex-direction: column;">
+                    <p style="font-size: 18px; text-align: center; margin-block-start: 0; margin-block-end: 0;">
+                        AOI Vacancy Count Percentage* (%)
+                    </p>
+                    <div style="flex: 1; min-height: 0;">
+                        <canvas id="aoiVacancyChart"></canvas>
+                    </div>
+                    <p id="aoiSummaryText" style="font-size: 16px; text-align: center; margin-block-end: 0;"></p>
+                </div>
+                <div class="report-desc">*AVC(AOI Vacancy count percentage) 수치가 높게 나올수록 ASD일 가능성이 높다는 의미</div>
+                <div class="pdf-title">3. 진단 내역</div>
+                <div class="report-table-container">
+                    <table class="report-table">
+                        <tr>
+                            <th></th>
+                            <th colspan="2">Video 1</th>
+                            <th>Video 2</th>
+                        </tr>
+                        <tr>
+                            <th>AOI<br>(관심영역)</th>
+                            <td><img src="img/eye1.png"></td>
+                            <td><img src="img/lips1.png"></td>
+                            <td><img src="img/attention1.png"></td>
+                        </tr>
+                        <tr>
+                            <th>측정 내용</th>
+                            <td colspan="2">- 눈맞춤<br>- 마음이론 (Theory of Mind)<br>- 사회성<br>- 초기 언어발달</td>
+                            <td>- 공동주의 (Joint Attention)<br>- 사회적 의사소통 능력</td>
+                        </tr>
+                    </table></div>
+                   
+            </div>
+        </div>
+    </div>
+
+    <!-- 페이지 네비게이션 -->
+    <div class="pdf-pagination">
+        <button class="pdf-button" onclick="prevPage()">이전</button>
+        <div class="pdf-page-indicator">
+            <span class="pdf-dot pdf-dot-active"></span>
+            <span class="pdf-dot"></span>
+        </div>
+        <button class="pdf-button" onclick="nextPage()">다음</button>
+    </div>
+
+    <!-- Chart.js 라이브러리 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        /* 출력시 우측 잘리는 문제 해결 */
+        @media print {
+            canvas {
+                max-width: 100%;
+            }
+
+            .report-box4 {
+                padding-right: 10px;
+            }
+        }
+
+        /* 환자 이름, ID 여러줄로 보여주기 위한 스타일 */
+        .patient-info-cell {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            max-width: 250px;
+        }
+
+        th { text-wrap: nowrap; }
+        th, td { line-height: 1.2; }
+        .nowrap { white-space: nowrap; }
+    </style>
+
+    <script>
+        let currentPageId = 0;
+        const totalPages = 2; // 총 페이지 수를 2로 변경
+
+        function showPage(pageId) {
+            // 모든 페이지 숨기기
+            const pages = document.querySelectorAll('.pdf-page');
+            pages.forEach(page => page.classList.remove('pdf-active'));
+            
+            // 선택된 페이지 보이기
+            if (pages[pageId]) {
+                pages[pageId].classList.add('pdf-active');
+            }
+            
+            // 페이지 인디케이터 업데이트
+            updatePageIndicator(pageId);
+            
+            currentPageId = pageId;
+        }
+
+        function nextPage() {
+            if (currentPageId < totalPages - 1) {
+                showPage(currentPageId + 1);
+            }
+        }
+
+        function prevPage() {
+            if (currentPageId > 0) {
+                showPage(currentPageId - 1);
+            }
+        }
+
+        function updatePageIndicator(activePage) {
+            const dots = document.querySelectorAll('.pdf-dot');
+            dots.forEach((dot, index) => {
+                if (index === activePage) {
+                    dot.classList.add('pdf-dot-active');
+                } else {
+                    dot.classList.remove('pdf-dot-active');
+                }
+            });
+        }
+
+        // 페이지 로드 시 첫 번째 페이지 표시
+        document.addEventListener('DOMContentLoaded', function() {
+            showPage(0);
+        });
+    </script>
+
+</body>
+</html>
