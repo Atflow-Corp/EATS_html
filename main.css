@@ -3695,3 +3695,43 @@ margin-left: 8px;
         height: auto;
     }
 }
+
+/* 환자 이름, ID 여러줄로 보여주기 위한 스타일 */
+.patient-info-cell {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 250px;
+}
+
+/* 환자 정보 테이블의 이름과 ID 값 셀 너비 제한 */
+.report-table td:nth-child(2) { /* 이름 값 셀 */
+    max-width: 200px; /* 페이지 너비의 절반을 넘지 않도록 제한 */
+    white-space: nowrap; /* 줄바꿈 방지 */
+    overflow: hidden; /* 넘치는 텍스트 숨김 */
+    text-overflow: ellipsis; /* 긴 텍스트는 ...으로 표시 */
+}
+
+
+
+/* 환자 정보 테이블 전체 너비 조정 */
+.report-table {
+    table-layout: fixed; /* 테이블 레이아웃 고정 */
+    width: 100%;
+    border-collapse: collapse; /* 셀 간격 제거 */
+}
+
+/* 환자 정보 테이블 셀 너비 분배 */
+.report-table th,
+.report-table td {
+    padding: 8px 12px;
+    vertical-align: top;
+    white-space: nowrap; /* 줄바꿈 방지 */
+    font-size: 13px; /* 기존 14px에서 1단계 작게 */
+}
+
+/* 테이블 안정성을 위한 추가 스타일 */
+.report-table-container {
+    overflow-x: auto; /* 가로 스크롤 방지 */
+    max-width: 100%;
+}
